@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#19192d"><meta name="description" content="Уфанет — домашний интернет и телевидение в Уфе.">
+<title>Уфанет — интернет для вашего города</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="./assets/images/hero.jpg"><link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<main>
+<section class="hero" id="top">
+<div class="hero__media" aria-hidden="true"><video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/hero.jpg"><source src="./assets/video/hero.mp4" type="video/mp4"></video></div>
+<header class="site-header">
+<a class="brand" href="#top" aria-label="Уфанет — на главную"><img src="./assets/images/logo.svg" width="134" height="62" alt="Уфанет, официальный дилер"></a>
+<nav class="desktop-nav" aria-label="Основная навигация">
+<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie">Тарифы в квартиру</a>
+<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie-chastnyy-dom">Тарифы в частный дом</a>
+<a href="https://ufanet-pro.ru/">Услуги</a>
+<a class="desktop-nav__business" href="https://ufanet-pro.ru/ufanet-dlya-biznesa"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
+</nav>
+<div class="header-actions"><span class="city" aria-label="Город: Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg>Уфа</span>
+<a class="button button--header" href="#check-address">Подключиться</a>
+<button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
+<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie">Тарифы в квартиру</a>
+<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie-chastnyy-dom">Тарифы в частный дом</a>
+<a href="https://ufanet-pro.ru/">Услуги</a>
+<a href="https://ufanet-pro.ru/ufanet-dlya-biznesa">Для бизнеса</a>
+</nav></header>
+<section class="hero__content" aria-labelledby="hero-title">
+<h1 id="hero-title">Интернет от Уфанет<br><span>в Уфе</span></h1>
+<p>Домашний интернет и телевидение для жизни в вашем ритме.</p>
+<div class="hero__offer">Первый месяц бесплатно</div>
+<a class="button button--hero" href="#check-address">Подключить<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</section>
+
+</section>
+<section class="coverage" id="check-address" aria-labelledby="coverage-title">
+  <svg class="coverage__art" viewBox="0 0 1400 620" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M808 135C933 4 1035 35 1095 140C1176 282 1275 188 1459 45" stroke="#80298D" stroke-width="70" stroke-linecap="round"/>
+      <path d="M808 135C933 4 1035 35 1095 140C1176 282 1275 188 1459 45" stroke="#A748AD" stroke-width="18" stroke-linecap="round"/>
+      <path d="M-108 535C65 353 175 635 345 489C453 396 516 353 630 445" stroke="#F5821F" stroke-width="62" stroke-linecap="round"/>
+      <path d="M-108 535C65 353 175 635 345 489C453 396 516 353 630 445" stroke="#FFC078" stroke-width="14" stroke-linecap="round"/>
+    </svg>
+  <div class="coverage__inner">
+    <h2 id="coverage-title">Проверьте возможность<br>подключения</h2>
+    <div class="coverage__panel">
+      <form class="coverage__form" id="coverage-form" novalidate>
+        <div class="coverage__fields">
+          <label class="coverage__field">
+            <span>Адрес подключения</span>
+            <input id="coverage-address" name="address" type="text" autocomplete="street-address" placeholder="Улица, дом, квартира" minlength="6" required>
+          </label>
+          <label class="coverage__field">
+            <span>Номер телефона</span>
+            <input id="coverage-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (999) 999-99-99" required>
+          </label>
+          <button class="coverage__submit" type="submit">Проверить адрес <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <label class="coverage__consent">
+          <input id="coverage-consent" name="consent" type="checkbox" required>
+          <span class="coverage__check" aria-hidden="true"></span>
+          <span>Я согласен с <a href="https://ufanet.org/policy.php" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и на обработку персональных данных</span>
+        </label>
+        <p class="coverage__status" id="coverage-status" role="status" aria-live="polite" hidden>Форма заполнена. Для отправки заявки перейдите на <a href="https://ufanet.org/check-address" target="_blank" rel="noopener noreferrer">страницу проверки Уфанет</a>. Адрес и телефон потребуется ввести там повторно.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="tariffs" id="tariffs" aria-labelledby="tariffs-title">
+  <div class="tariffs__inner">
+    <div class="tariffs__heading">
+      <h2 id="tariffs-title">Интернет <span>+ ТВ</span></h2>
+      <p>Телевидение с невероятно чёткой картинкой и объёмным звуком вместе с быстрым домашним Интернетом от «Уфанет»!</p>
+    </div>
+    <div class="tariffs__grid" id="tariffs-grid" data-source="./assets/tariffs.json" data-service="Интернет + ТВ" aria-live="polite"></div>
+    <p class="tariffs__error" id="tariffs-error" hidden>Не удалось загрузить тарифы. Обновите страницу.</p>
+  </div>
+</section>
+<section class="tariffs tariffs--internet" id="internet-tariffs" aria-labelledby="internet-tariffs-title">
+  <div class="tariffs__inner">
+    <div class="tariffs__heading">
+      <h2 id="internet-tariffs-title">Интернет</h2>
+      <p>Быстрый и стабильный Интернет от «Уфанет»</p>
+    </div>
+    <div class="tariffs__grid" id="internet-tariffs-grid" data-source="./assets/internet-tariffs.json" data-service="Интернет" aria-live="polite"></div>
+    <p class="tariffs__error" id="internet-tariffs-error" hidden>Не удалось загрузить тарифы. Обновите страницу.</p>
+  </div>
+</section>
+<section class="equipment" id="equipment" aria-labelledby="equipment-title">
+  <div class="equipment__inner">
+    <div class="equipment__heading">
+      <p class="equipment__eyebrow">Для стабильной связи дома</p>
+      <h2 id="equipment-title">Оборудование <span>от Уфанет</span></h2>
+      <p>Можно взять в аренду вместе с тарифом или сразу приобрести в собственность.</p>
+    </div>
+    <div class="equipment__grid">
+      <article class="equipment-card equipment-card--routers">
+        <div class="equipment-card__topline">
+          <div>
+            <p class="equipment-card__type">Wi-Fi роутер</p>
+            <h3>Гигабитный интернет<br>без лишних проводов</h3>
+          </div>
+          <span class="equipment-card__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="7" y="27" width="34" height="12" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M15 27v-5m18 5v-5M15.5 17.5a12 12 0 0 1 17 0M20 22a5.7 5.7 0 0 1 8 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="15" cy="33" r="1.6" fill="currentColor"/></svg>
+          </span>
+        </div>
+        <div class="equipment-card__visual equipment-card__visual--routers">
+          <figure>
+            <img src="./assets/images/image_-_2025-08-01T143141.865_7ye2y37.png" width="512" height="358" loading="lazy" alt="Wi-Fi роутер SNR-RT622-G41 AX2 NAG">
+            <figcaption>SNR-RT622-G41 AX2 NAG</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/images/B-OptiX_BO-RT622-G31-G2_NAG.png" width="512" height="358" loading="lazy" alt="Wi-Fi роутер BO-RT622-G31-G2 NAG">
+            <figcaption>BO-RT622-G31-G2 NAG</figcaption>
+          </figure>
+        </div>
+        <ul class="equipment-card__features" aria-label="Характеристики роутеров">
+          <li>2 диапазона</li>
+          <li>до 1000 Мбит/с</li>
+          <li>поддержка MIMO</li>
+        </ul>
+        <div class="equipment-card__prices" aria-label="Стоимость Wi-Fi роутера">
+          <div class="equipment-price">
+            <span>В аренду</span>
+            <strong>170 <small>₽/мес.</small></strong>
+            <p>На всех тарифных планах</p>
+          </div>
+          <div class="equipment-price equipment-price--accent">
+            <span>Купить</span>
+            <strong>4 250 <small>₽</small></strong>
+            <p>Любая из двух моделей</p>
+          </div>
+        </div>
+      </article>
+      <article class="equipment-card equipment-card--tv">
+        <div class="equipment-card__topline">
+          <div>
+            <p class="equipment-card__type">IPTV-приставка</p>
+            <h3>Уфанет ТВ<br>на любом телевизоре</h3>
+          </div>
+          <span class="equipment-card__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="27" rx="6" stroke="currentColor" stroke-width="2.4"/><path d="m18 6 6 4 6-4M18 31h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m21 18 9 5-9 5V18Z" fill="currentColor"/></svg>
+          </span>
+        </div>
+        <div class="equipment-card__visual equipment-card__visual--tv">
+          <img src="./assets/images/63f077af-40e9-499e-afaf-bcda9845e5fb.jpg" width="1376" height="768" loading="lazy" alt="IPTV-приставка Уфанет с пультом управления">
+        </div>
+        <p class="equipment-card__description">Нужна, если телевизор не поддерживает SMART TV. Приставку можно взять в аренду или приобрести в собственность.</p>
+        <div class="equipment-card__prices" aria-label="Стоимость IPTV-приставки">
+          <div class="equipment-price">
+            <span>В аренду</span>
+            <strong>130 <small>₽/мес.</small></strong>
+            <p>Вместе с услугой Уфанет ТВ</p>
+          </div>
+          <div class="equipment-price equipment-price--accent">
+            <span>Купить</span>
+            <strong>5 150 <small>₽</small></strong>
+            <p>В собственность</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="equipment__footer">
+      <p>Цены действуют для Уфы. Наличие конкретной модели уточнит специалист при оформлении заявки.</p>
+      <a class="equipment__action" href="#check-address">Проверить подключение <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+<section class="connection-steps" id="connection-steps" aria-labelledby="connection-steps-title">
+  <div class="connection-steps__inner">
+    <h2 id="connection-steps-title">Как проходит <span>подключение</span></h2>
+    <ol class="connection-steps__grid">
+      <li class="connection-step connection-step--one">
+        <div class="connection-step__number" aria-hidden="true"><strong>01</strong></div>
+        <div class="connection-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M14 8h20a4 4 0 0 1 4 4v28H10V12a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2.5"/><path d="M17 17h14M17 24h14M17 31h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m29 33 3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="connection-step__body">
+          <h3>Вы оставляете заявку</h3>
+          <p>Указываете адрес и контакты, чтобы мы проверили техническую возможность подключения.</p>
+        </div>
+      </li>
+      <li class="connection-step connection-step--two">
+        <div class="connection-step__number" aria-hidden="true"><strong>02</strong></div>
+        <div class="connection-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 42s13-11.1 13-23A13 13 0 1 0 11 19c0 11.9 13 23 13 23Z" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="19" r="5" stroke="currentColor" stroke-width="2.5"/><path d="m31 33 4 4 8-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="connection-step__body">
+          <h3>Проверяем адрес</h3>
+          <p>Смотрим доступные скорости, сроки подключения и варианты оборудования для вашего дома.</p>
+        </div>
+      </li>
+      <li class="connection-step connection-step--three">
+        <div class="connection-step__number" aria-hidden="true"><strong>03</strong></div>
+        <div class="connection-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M10 11h28M14 11l2 25h16l2-25M19 20h10M20 28h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="11" r="5" fill="currentColor"/></svg>
+        </div>
+        <div class="connection-step__body">
+          <h3>Подбираем тариф</h3>
+          <p>Предлагаем скорость, роутер, ТВ и другие опции под ваши задачи и количество устройств.</p>
+        </div>
+      </li>
+      <li class="connection-step connection-step--four">
+        <div class="connection-step__number" aria-hidden="true"><strong>04</strong></div>
+        <div class="connection-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="7" y="27" width="34" height="11" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M15 27v-5m18 5v-5M16 18a11 11 0 0 1 16 0M20 22a5.5 5.5 0 0 1 8 0" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="15" cy="32.5" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="connection-step__body">
+          <h3>Подключаем интернет</h3>
+          <p>Проводим монтаж, настраиваем оборудование и проверяем, что связь работает стабильно.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section></main><script src="./assets/js/script.js"></script>
+</body></html>
+

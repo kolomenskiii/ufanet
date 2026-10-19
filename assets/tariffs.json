@@ -1,0 +1,42 @@
+[
+  {
+    "id": "advanced",
+    "name": "Продвинутый",
+    "speed": "200",
+    "speedUnit": "Мбит/с",
+    "channels": 240,
+    "monthlyPrice": 850,
+    "firstMonthPrice": 0,
+    "router": { "type": "purchase", "price": 4450, "label": "Купить за 4 450 ₽" }
+  },
+  {
+    "id": "modern",
+    "name": "Современный",
+    "speed": "400",
+    "speedUnit": "Мбит/с",
+    "channels": 240,
+    "monthlyPrice": 930,
+    "firstMonthPrice": 0,
+    "router": { "type": "rent", "price": 170, "label": "Аренда за 170 ₽/мес" }
+  },
+  {
+    "id": "value",
+    "name": "Выгодный",
+    "speed": "700",
+    "speedUnit": "Мбит/с",
+    "channels": 240,
+    "monthlyPrice": 1010,
+    "firstMonthPrice": 0,
+    "router": { "type": "rent", "price": 170, "label": "Аренда за 170 ₽/мес" }
+  },
+  {
+    "id": "breakthrough",
+    "name": "Прорывной",
+    "speed": "1",
+    "speedUnit": "Гбит/с",
+    "channels": 240,
+    "monthlyPrice": 1535,
+    "firstMonthPrice": null,
+    "router": { "type": "rent", "price": 170, "label": "Аренда за 170 ₽/мес" }
+  }
+]
