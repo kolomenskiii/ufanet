@@ -4,8 +4,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#19192d"><meta name="description" content="Уфанет — домашний интернет и телевидение в Уфе.">
 <title>Уфанет — интернет для вашего города</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./assets/images/ufanet.png">
 <link rel="preload" as="image" href="./assets/images/hero.jpg"><link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -15,10 +14,11 @@
 <header class="site-header">
 <a class="brand" href="#top" aria-label="Уфанет — на главную"><img src="./assets/images/logo.svg" width="134" height="62" alt="Уфанет, официальный дилер"></a>
 <nav class="desktop-nav" aria-label="Основная навигация">
-<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie">Тарифы в квартиру</a>
-<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie-chastnyy-dom">Тарифы в частный дом</a>
-<a href="https://ufanet-pro.ru/">Услуги</a>
-<a class="desktop-nav__business" href="https://ufanet-pro.ru/ufanet-dlya-biznesa"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
+<a href="#tariffs">Тарифы в квартиру</a>
+<a href="#callback">Тарифы в частный дом</a>
+<a href="#internet-tariffs">Услуги</a>
+<a href="./videonablyudenie.html">Видеонаблюдение</a>
+<a class="desktop-nav__business" href="#callback"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
 </nav>
 <div class="header-actions"><div class="city-picker">
 <button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__name" id="current-city">Уфа</span><span class="city__chevron" aria-hidden="true"></span></button>
@@ -32,10 +32,11 @@
 <a class="button button--header" href="#application-modal" data-open-modal>Подключиться</a>
 <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
-<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie">Тарифы в квартиру</a>
-<a href="https://ufanet-pro.ru/ufa/ufanet-internet-televidenie-chastnyy-dom">Тарифы в частный дом</a>
-<a href="https://ufanet-pro.ru/">Услуги</a>
-<a href="https://ufanet-pro.ru/ufanet-dlya-biznesa">Для бизнеса</a>
+<a href="#tariffs">Тарифы в квартиру</a>
+<a href="#callback">Тарифы в частный дом</a>
+<a href="#internet-tariffs">Услуги</a>
+<a href="./videonablyudenie.html">Видеонаблюдение</a>
+<a href="#callback">Для бизнеса</a>
 </nav></header>
 <section class="hero__content" aria-labelledby="hero-title">
 <h1 id="hero-title">Интернет от Уфанет<br><span id="hero-city">в Уфе</span></h1>
@@ -46,11 +47,17 @@
 
 </section>
 <section class="coverage" id="check-address" aria-labelledby="coverage-title">
-  <svg class="coverage__art" viewBox="0 0 1400 620" preserveAspectRatio="none" fill="none" aria-hidden="true">
+  <svg class="coverage__art coverage__art--desktop" viewBox="0 0 1400 620" preserveAspectRatio="none" fill="none" aria-hidden="true">
       <path d="M808 135C933 4 1035 35 1095 140C1176 282 1275 188 1459 45" stroke="#80298D" stroke-width="70" stroke-linecap="round"/>
       <path d="M808 135C933 4 1035 35 1095 140C1176 282 1275 188 1459 45" stroke="#A748AD" stroke-width="18" stroke-linecap="round"/>
       <path d="M-108 535C65 353 175 635 345 489C453 396 516 353 630 445" stroke="#F5821F" stroke-width="62" stroke-linecap="round"/>
       <path d="M-108 535C65 353 175 635 345 489C453 396 516 353 630 445" stroke="#FFC078" stroke-width="14" stroke-linecap="round"/>
+    </svg>
+  <svg class="coverage__art coverage__art--mobile" viewBox="0 0 390 660" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+      <path d="M340 -38C250 48 274 121 373 157C458 188 445 257 354 304" stroke="#80298D" stroke-width="52" stroke-linecap="round"/>
+      <path d="M340 -38C250 48 274 121 373 157C458 188 445 257 354 304" stroke="#A748AD" stroke-width="13" stroke-linecap="round"/>
+      <path d="M-62 548C28 450 98 476 143 542C184 601 244 626 322 570" stroke="#F5821F" stroke-width="48" stroke-linecap="round"/>
+      <path d="M-62 548C28 450 98 476 143 542C184 601 244 626 322 570" stroke="#FFC078" stroke-width="12" stroke-linecap="round"/>
     </svg>
   <div class="coverage__inner">
     <h2 id="coverage-title">Проверьте возможность<br>подключения</h2>
@@ -72,7 +79,7 @@
           <span class="coverage__check" aria-hidden="true"></span>
           <span>Я ознакомлен с <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a> и даю <a href="./personal-data-consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a></span>
         </label>
-        <p class="coverage__status" id="coverage-status" role="status" aria-live="polite" hidden>Форма заполнена. Для отправки заявки перейдите на <a href="https://ufanet.org/check-address" target="_blank" rel="noopener noreferrer">страницу проверки Уфанет</a>. Адрес и телефон потребуется ввести там повторно.</p>
+        <p class="coverage__status" id="coverage-status" role="status" aria-live="polite" hidden>Адрес и телефон заполнены. Продолжите оформление в открывшейся форме заявки.</p>
       </form>
     </div>
   </div>
@@ -131,7 +138,7 @@
       <p>Можно взять в аренду вместе с тарифом или сразу приобрести в собственность.</p>
     </div>
     <div class="equipment__grid">
-      <article class="equipment-card equipment-card--routers">
+      <article class="equipment-card equipment-card--routers" id="routers">
         <div class="equipment-card__topline">
           <div>
             <p class="equipment-card__type">Wi-Fi роутер</p>
@@ -166,7 +173,7 @@
           </div>
         </div>
       </article>
-      <article class="equipment-card equipment-card--tv">
+      <article class="equipment-card equipment-card--tv" id="tv-boxes">
         <div class="equipment-card__topline">
           <div>
             <p class="equipment-card__type">IPTV-приставка</p>
@@ -259,7 +266,48 @@
       </details>
     </div>
   </div>
-</section></main>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <a class="site-footer__brand" href="#top" aria-label="Уфанет — на главную">
+        <img src="./assets/images/logo.svg" width="134" height="62" alt="Уфанет, официальный дилер">
+      </a>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <div class="site-footer__column">
+          <h2>Оборудование</h2>
+          <a href="./videonablyudenie.html#cameras">Камеры Уфанет</a>
+          <a href="#routers">Роутеры и ТВ-приставки Уфанет</a>
+          <a href="#callback">Умный шлагбаум от Уфанет</a>
+        </div>
+        <div class="site-footer__column">
+          <h2>Услуги</h2>
+          <a href="#internet-tariffs">Интернет</a>
+          <a href="#tariffs">Интернет + ТВ</a>
+        </div>
+        <div class="site-footer__column">
+          <h2>Статьи</h2>
+          <a href="#callback">Интернет для бизнеса</a>
+          <a href="#tariffs">Телевидение</a>
+          <a href="#callback">Интернет в частный дом</a>
+          <a href="#tariffs">Интернет в квартиру</a>
+        </div>
+      </nav>
+      <div class="site-footer__actions" aria-label="Контакты">
+        <a class="site-footer__phone" href="tel:88007074550">8 800 707-45-50</a>
+        <a class="site-footer__callback" href="#callback">Заказать звонок</a>
+        <a class="site-footer__max" href="#application-modal" data-open-modal>
+          <img src="./assets/images/MAX.svg" width="30" height="30" alt="" aria-hidden="true">
+          <span>Написать в MAX</span>
+        </a>
+      </div>
+    </div>
+    <p class="site-footer__legal">
+      Вся информация на сайте размещена на основании партнерского договора с&nbsp;АО «Уфанет». Посещая сайт <span>https://ufanethome.ru/</span>, Вы предоставляете согласие на обработку данных (данные cookies и иные пользовательские данные), сбор которых осуществляется на условиях <a href="./privacy-policy.html">Политики обработки персональных данных</a>. Указанные данные могут быть использованы для их последующей обработки системами Google Analytics, Яндекс.Метрика и др., которая осуществляется с целью функционирования сайта <span>https://ufanethome.ru/</span>. Отправляя заявку, Вы принимаете <a href="./privacy-policy.html">Политику конфиденциальности</a> и даёте <a href="./personal-data-consent.html">согласие на обработку Ваших персональных данных</a>.
+    </p>
+  </div>
+</footer>
 <dialog class="application-modal" id="application-modal" aria-labelledby="application-modal-title" aria-describedby="application-modal-description">
   <div class="application-modal__top">
     <h2 id="application-modal-title">Заявка на подключение</h2>
