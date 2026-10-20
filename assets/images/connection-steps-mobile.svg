@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1120" viewBox="0 0 360 1120" fill="none">
+  <title>Как проходит подключение — мобильная версия</title>
+  <desc>Оставьте заявку, мы проверим адрес, подберём тариф и подключим интернет.</desc>
+  <defs>
+    <linearGradient id="orange" x2="1" y2="1"><stop stop-color="#FFA54B"/><stop offset="1" stop-color="#F5821F"/></linearGradient>
+    <linearGradient id="purple" x2="1" y2="1"><stop stop-color="#A74BAF"/><stop offset="1" stop-color="#80298D"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="145%" color-interpolation-filters="sRGB">
+      <feDropShadow dy="9" stdDeviation="7" flood-color="#37243E" flood-opacity=".15"/>
+    </filter>
+    <filter id="paper-shadow" x="-15%" y="-25%" width="130%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dy="5" stdDeviation="5" flood-color="#41213C" flood-opacity=".16"/>
+    </filter>
+    <g id="orange-card">
+      <g filter="url(#shadow)">
+        <rect x="18" y="25" width="324" height="234" rx="25" fill="#D9660C"/>
+        <rect x="18" y="16" width="324" height="234" rx="25" fill="url(#orange)"/>
+      </g>
+      <path d="M32 91H228Q239 91 246 82L265 60Q271 52 283 52H326Q350 52 350 76V221Q350 245 326 245H32Q8 245 8 221V115Q8 91 32 91Z" fill="#FFF" stroke="#E9E4EB" filter="url(#paper-shadow)"/>
+      <path d="M33 103H230Q245 103 254 91L274 68Q277 64 285 64H324Q338 64 338 78V219Q338 233 324 233H34Q20 233 20 219V117Q20 103 33 103Z" stroke="#DDD6E0" stroke-dasharray="3 4"/>
+    </g>
+    <g id="purple-card">
+      <g filter="url(#shadow)">
+        <rect x="18" y="25" width="324" height="234" rx="25" fill="#60206D"/>
+        <rect x="18" y="16" width="324" height="234" rx="25" fill="url(#purple)"/>
+      </g>
+      <path d="M328 91H132Q121 91 114 82L95 60Q89 52 77 52H34Q10 52 10 76V221Q10 245 34 245H328Q352 245 352 221V115Q352 91 328 91Z" fill="#FFF" stroke="#E9E4EB" filter="url(#paper-shadow)"/>
+      <path d="M327 103H130Q115 103 106 91L86 68Q83 64 75 64H36Q22 64 22 78V219Q22 233 36 233H326Q340 233 340 219V117Q340 103 327 103Z" stroke="#DDD6E0" stroke-dasharray="3 4"/>
+    </g>
+  </defs>
+  <g font-family="Manrope, 'Segoe UI', Arial, sans-serif">
+    <g>
+      <use href="#orange-card"/>
+      <text x="42" y="73" fill="#FFF" font-size="49" font-weight="800" letter-spacing="-2">01</text>
+      <text x="109" y="68" fill="#FFF" font-size="11" font-weight="700" letter-spacing="2">ШАГ</text>
+      <g transform="translate(286 69)" stroke="#F5821F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 0H22Q26 0 26 4V32H0V4Q0 0 4 0ZM7 9H19M7 15H19M7 21H13M18 26L22 30L30 20"/>
+      </g>
+      <text x="38" y="135" fill="#A94B08" font-size="21" font-weight="800" letter-spacing="-.5">Вы оставляете заявку</text>
+      <g fill="#F5821F"><circle cx="41" cy="150" r="2.5"/><circle cx="52" cy="150" r="2.5" opacity=".5"/><circle cx="63" cy="150" r="2.5" opacity=".25"/></g>
+      <text x="38" y="176" fill="#615C68" font-size="16">
+        <tspan x="38">Указываете адрес и контакты,</tspan>
+        <tspan x="38" dy="22">чтобы мы проверили техническую</tspan>
+        <tspan x="38" dy="22">возможность подключения.</tspan>
+      </text>
+    </g>
+    <g transform="translate(0 280)">
+      <use href="#purple-card"/>
+      <text x="316" y="73" text-anchor="end" fill="#FFF" font-size="49" font-weight="800" letter-spacing="-2">02</text>
+      <text x="213" y="68" text-anchor="end" fill="#FFF" font-size="11" font-weight="700" letter-spacing="2">ШАГ</text>
+      <g transform="translate(44 67)" stroke="#80298D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 35S28 23 28 13A13 13 0 1 0 2 13C2 23 15 35 15 35Z"/>
+        <circle cx="15" cy="13" r="4.5"/><path d="M22 27L26 31L33 22"/>
+      </g>
+      <text x="38" y="135" fill="#80298D" font-size="21" font-weight="800" letter-spacing="-.5">Проверяем адрес</text>
+      <g fill="#80298D"><circle cx="41" cy="150" r="2.5"/><circle cx="52" cy="150" r="2.5" opacity=".5"/><circle cx="63" cy="150" r="2.5" opacity=".25"/></g>
+      <text x="38" y="176" fill="#615C68" font-size="16">
+        <tspan x="38">Смотрим доступные скорости,</tspan>
+        <tspan x="38" dy="22">сроки подключения и варианты</tspan>
+        <tspan x="38" dy="22">оборудования для вашего дома.</tspan>
+      </text>
+    </g>
+    <g transform="translate(0 560)">
+      <use href="#orange-card"/>
+      <text x="42" y="73" fill="#FFF" font-size="49" font-weight="800" letter-spacing="-2">03</text>
+      <text x="109" y="68" fill="#FFF" font-size="11" font-weight="700" letter-spacing="2">ШАГ</text>
+      <g transform="translate(284 68)" stroke="#F5821F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 6H32M0 17H32M0 28H32"/>
+        <rect x="7" y="2" width="6" height="8" rx="2" fill="#FFF"/>
+        <rect x="21" y="13" width="6" height="8" rx="2" fill="#FFF"/>
+        <rect x="11" y="24" width="6" height="8" rx="2" fill="#FFF"/>
+      </g>
+      <text x="38" y="135" fill="#A94B08" font-size="21" font-weight="800" letter-spacing="-.5">Подбираем тариф</text>
+      <g fill="#F5821F"><circle cx="41" cy="150" r="2.5"/><circle cx="52" cy="150" r="2.5" opacity=".5"/><circle cx="63" cy="150" r="2.5" opacity=".25"/></g>
+      <text x="38" y="176" fill="#615C68" font-size="16">
+        <tspan x="38">Предлагаем скорость, роутер, ТВ</tspan>
+        <tspan x="38" dy="22">и другие опции под ваши задачи</tspan>
+        <tspan x="38" dy="22">и количество устройств.</tspan>
+      </text>
+    </g>
+    <g transform="translate(0 840)">
+      <use href="#purple-card"/>
+      <text x="316" y="73" text-anchor="end" fill="#FFF" font-size="49" font-weight="800" letter-spacing="-2">04</text>
+      <text x="213" y="68" text-anchor="end" fill="#FFF" font-size="11" font-weight="700" letter-spacing="2">ШАГ</text>
+      <g transform="translate(43 67)" stroke="#80298D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="0" y="21" width="34" height="11" rx="4"/>
+        <path d="M6 21V15M28 21V15M6 6A16 16 0 0 1 28 6M12 12A8 8 0 0 1 22 12M23 26.5H27"/>
+        <circle cx="7" cy="26.5" r="1" fill="#80298D" stroke="none"/>
+      </g>
+      <text x="38" y="135" fill="#80298D" font-size="21" font-weight="800" letter-spacing="-.5">Подключаем интернет</text>
+      <g fill="#80298D"><circle cx="41" cy="150" r="2.5"/><circle cx="52" cy="150" r="2.5" opacity=".5"/><circle cx="63" cy="150" r="2.5" opacity=".25"/></g>
+      <text x="38" y="176" fill="#615C68" font-size="16">
+        <tspan x="38">Проводим монтаж, настраиваем</tspan>
+        <tspan x="38" dy="22">оборудование и проверяем,</tspan>
+        <tspan x="38" dy="22">что связь работает стабильно.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
