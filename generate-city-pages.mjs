@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 
-const domain = 'https://ufanethome.ru';
+const domain = 'https://kolomenskiii.github.io/ufanet';
 const image = domain + '/assets/images/prev-1200x630.png';
 const script = fs.readFileSync('assets/js/script.js', 'utf8');
 const definitions = script.slice(script.indexOf('const cityGroups'), script.indexOf('const cityPicker'));
@@ -16,12 +16,8 @@ const replaceTag = (html, regex, value, label) => {
   return html.replace(regex, value);
 };
 const meta = (name, value, property = false) => '<meta ' + (property ? 'property' : 'name') + '="' + name + '" content="' + escapeHtml(value) + '">';
-const noindexOnGithub = '<script>if(location.hostname.endsWith(".github.io")){const meta=document.createElement("meta");meta.name="robots";meta.content="noindex,nofollow";document.head.append(meta)}</script>';
-const rootRedirect = '<script>if(location.pathname.endsWith("/index.html"))location.replace(document.querySelector("link[rel=canonical]").href+location.search+location.hash)</script>';
-const addHeadScripts = (html, isHome) => html.includes('meta.name="robots"') ? html : html.replace('</head>', noindexOnGithub + (isHome ? rootRedirect : '') + '\n</head>');
 
 let root = fs.readFileSync('index.html', 'utf8');
-root = addHeadScripts(root, true);
 
 root = root.replace('<html lang="ru">', '<html lang="ru" data-city="Уфа">');
 fs.mkdirSync('cities', { recursive: true });
@@ -33,7 +29,7 @@ for (const city of cities) {
   const title = 'Домашний интернет и ТВ Уфанет в ' + locative + ' — тарифы и подключение';
   const description = 'Интернет и телевидение Уфанет в ' + locative + ': сравните тарифы, проверьте возможность подключения по адресу и оставьте заявку онлайн.';
   const url = domain + '/' + file;
-  let html = file ? root.replace(rootRedirect, '') : root;
+  let html = root;
   html = replaceTag(html, /<title>[^<]*<\/title>/, '<title>' + escapeHtml(title) + '</title>', 'title');
   html = replaceTag(html, /<meta name="description" content="[^"]*">/, meta('description', description), 'description');
   html = replaceTag(html, /<meta property="og:title" content="[^"]*">/, meta('og:title', title, true), 'og:title');
@@ -55,7 +51,7 @@ for (const city of cities) {
 }
 const contentFiles = ['dlya-biznesa.html','videonablyudenie.html','umnyj-shlagbaum.html','internet-v-kvartiru.html','internet-v-chastnyj-dom.html','internet-dlya-biznesa.html','televidenie.html','privacy-policy.html','personal-data-consent.html'];
 for (const file of contentFiles) {
-  let html = addHeadScripts(fs.readFileSync(file, 'utf8'), false);
+  let html = fs.readFileSync(file, 'utf8');
   html = html.replaceAll('./index.html', './');
   html = html.replaceAll(domain + '/index.html', domain + '/');
   const url = domain + '/' + file;
@@ -81,6 +77,5 @@ const sitemapUrls = ['/', ...pageFiles.map(file => '/' + file), ...contentFiles.
 fs.writeFileSync('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   sitemapUrls.map(path => '  <url><loc>' + domain + path + '</loc></url>').join('\n') + '\n</urlset>\n');
 fs.writeFileSync('robots.txt', 'User-agent: *\nAllow: /\nSitemap: ' + domain + '/sitemap.xml\n');
-fs.writeFileSync('CNAME', 'ufanethome.ru\n');
 console.log('Generated ' + pageFiles.length + ' city pages; sitemap has ' + sitemapUrls.length + ' URLs.');
 
