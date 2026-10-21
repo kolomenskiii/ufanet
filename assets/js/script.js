@@ -102,7 +102,7 @@ if (cityPicker) {
     currentCity = selected.name;
     cityName.textContent = selected.name;
     toggle.setAttribute('aria-label', `Выбрать город, сейчас ${selected.name}`);
-    heroCity.textContent = `в ${cityPrepositional[selected.name]}`;
+    if (heroCity) heroCity.textContent = `в ${cityPrepositional[selected.name]}`;
     if (formCity) formCity.value = selected.name;
     document.documentElement.dataset.city = selected.name;
     document.documentElement.dataset.region = selected.region;
@@ -227,7 +227,6 @@ if (applicationModal && applicationForm) {
   const phone = applicationForm.querySelector('#application-phone');
   const address = applicationForm.querySelector('#application-address');
   const status = applicationForm.querySelector('#application-status');
-  const maxButton = applicationModal.querySelector('.application-modal__max');
 
   for (const input of [name, phone, address]) {
     input.addEventListener('input', () => {
@@ -252,10 +251,6 @@ if (applicationModal && applicationForm) {
     status.hidden = false;
   });
 
-  maxButton.addEventListener('click', () => {
-    status.textContent = 'Ссылка на чат MAX пока не указана.';
-    status.hidden = false;
-  });
 }
 
 if (video) {

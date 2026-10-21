@@ -298,3 +298,9 @@
   .coverage h2,.connection-steps h2,.faq h2{margin-bottom:32px}
   .tariffs__heading,.equipment__heading{margin-bottom:32px}
 }
+/* Keep the service navigation within the shared header. */
+.site-header--services{gap:clamp(18px,2vw,28px)}
+.site-header--services .desktop-nav{gap:clamp(14px,1.5vw,22px)}
+.site-header--services [aria-current="page"]{color:#80298d}
+@media(min-width:1101px) and (max-width:1340px){.site-header--services .desktop-nav a{font-size:11px}.site-header--services .header-actions{gap:10px}.site-header--services .city__name{max-width:80px}}
+@media(max-width:1240px){.site-header--services .desktop-nav{display:none}.site-header--services .header-actions{margin-left:auto}.site-header--services .menu-toggle{display:flex;width:42px;height:42px;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;border:0;background:transparent;cursor:pointer}.site-header--services .menu-toggle span{width:22px;height:2px;border-radius:2px;background:#211b27}.site-header--services .mobile-nav:not([hidden]){position:absolute;top:calc(100% + 8px);right:0;left:0;display:grid;gap:4px;padding:14px;border-radius:19px;background:#fff;box-shadow:0 20px 40px rgba(20,15,36,.18)}.site-header--services .mobile-nav a{padding:11px 12px;border-radius:9px;color:#211b27;font-size:14px;font-weight:700}.site-header--services .mobile-nav a:hover,.site-header--services .mobile-nav a:focus-visible{background:#f7f0f7}}

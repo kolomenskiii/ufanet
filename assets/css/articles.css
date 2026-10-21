@@ -1,0 +1,30 @@
+﻿.article-page{background:#fbfafc;color:#21172e}
+.article-page .coverage{padding-top:48px;padding-bottom:56px}
+.article-page .coverage h2{font-size:clamp(30px,3.4vw,46px)}
+.article-page .coverage h2 br{display:none}
+.article-shell{width:min(calc(100% - 64px),1180px);margin:0 auto;padding:56px 0 72px}
+.article-breadcrumbs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px;color:#6c6173;font-size:13px}
+.article-breadcrumbs a:hover{color:#80298d;text-decoration:underline}
+.article-layout{display:grid;grid-template-columns:minmax(0,790px) minmax(220px,1fr);gap:64px;align-items:start}
+.article-copy{min-width:0}
+.article-copy h1{margin:0 0 24px;font-size:clamp(36px,4.5vw,62px);line-height:1.12;letter-spacing:-.055em;text-wrap:balance}
+.article-copy h2{margin:42px 0 16px;font-size:clamp(25px,2.5vw,32px);line-height:1.25;letter-spacing:-.035em;scroll-margin-top:24px}
+.article-copy p,.article-copy li{font-size:17px;line-height:1.85;color:#514659}
+.article-copy p{margin:0 0 18px}
+.article-copy .article-lead{font-size:20px;line-height:1.65;color:#33253e}
+.article-copy ul,.article-copy ol{padding-left:24px;margin:18px 0 24px}
+.article-copy li{padding-left:6px;margin:10px 0}
+.article-copy a{color:#80298d;text-decoration:underline;text-underline-offset:4px}
+.article-copy strong{color:#21172e}
+.article-toc{padding:25px;border:1px solid #e5dce9;border-radius:22px;background:#fff}
+.article-toc h2{margin:0 0 16px;font-size:18px}
+.article-toc ol{margin:0;padding-left:18px}
+.article-toc li{padding-left:4px;margin:13px 0;color:#80298d;font-size:14px;line-height:1.6}
+.article-toc a:hover{text-decoration:underline}
+.article-related{margin-top:48px;padding-top:28px;border-top:1px solid #e5dce9}
+.article-related h2{margin:0 0 18px;font-size:23px}
+.article-related ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0}
+.article-related a{display:block;padding:12px 17px;background:#f0e6f3;border-radius:12px;color:#70237c;font-size:14px;font-weight:700}
+.article-related a:hover{background:#e7d5ed}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:28px}.article-toc{grid-row:1}.article-toc ol{columns:2;column-gap:32px}.article-toc li{break-inside:avoid}}
+@media(max-width:600px){.article-shell{width:calc(100% - 40px);padding:32px 0 48px}.article-page .coverage{padding-top:36px;padding-bottom:40px}.article-copy p,.article-copy li{font-size:16px;line-height:1.75}.article-copy .article-lead{font-size:18px}.article-toc{padding:20px}.article-toc ol{columns:1}.article-copy h2{margin-top:32px}.article-related ul{display:grid}.article-breadcrumbs{font-size:12px}}

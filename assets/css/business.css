@@ -1,0 +1,47 @@
+/* Business page, using the shared service-page design. */
+.business-eyebrow{margin:0 0 22px;color:#e7b8ee;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.business-page .video-hero h1{font-size:clamp(48px,5.6vw,82px)}
+.business-page .video-hero h1 span{display:inline-block}
+.business-hero-visual{min-height:480px}
+.business-hero-visual>img{position:relative;width:85%;max-width:470px;transform:rotate(-7deg)}
+.business-hero-orbit{position:absolute;width:95%;aspect-ratio:1;border:1px solid #ffffff1c;border-radius:50%;background:radial-gradient(circle,#a34f9b40,transparent 65%);box-shadow:0 0 0 35px #ffffff03}
+.business-hero-status{position:absolute;right:1%;bottom:6%;display:flex;align-items:center;gap:13px;padding:18px 23px;border-radius:18px;background:#fff;color:#21172e;box-shadow:0 16px 50px #160d2433;transform:rotate(-3deg)}
+.business-hero-status>span{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e5f4e9;color:#278546;font-size:22px}
+.business-hero-status strong{display:block;font-size:16px;font-weight:800}
+.business-hero-status div>span{display:block;margin-top:4px;color:#726779;font-size:12px}
+.business-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px}
+.business-tabs button{padding:15px 22px;border:1px solid #dfd4e2;border-radius:999px;background:#fff;color:#65536d;font:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:background .2s,color .2s}
+.business-tabs button:hover{background:#eee3f0}
+.business-tabs button[aria-selected=true]{background:#80298d;border-color:#80298d;color:#fff}
+.business-panel[hidden]{display:none}
+.business-panel__title{margin:24px 0;font-size:24px;letter-spacing:-.04em}
+.business-tabs[role=tablist]~.business-panel>.business-panel__title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.business-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.business-service__image{display:grid;place-items:center;height:205px;background:radial-gradient(ellipse at 50% 65%,#e9daf0,transparent 65%)}
+.business-service__image img{width:80%;height:180px;object-fit:contain}
+.business-service h3{font-size:23px;overflow-wrap:break-word}
+.business-service .video-camera-card__body{padding:24px}
+.business-service__button{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;min-height:44px;padding:10px 0;border:0;border-top:1px solid #e8e0e9;background:transparent;color:#80298d;font:inherit;font-size:13px;font-weight:800;cursor:pointer;text-align:left}
+.business-service__button span{font-size:22px;color:#f5821f}
+.business-service__button:hover{color:#c65b00}
+.business-brand{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:40px;padding:50px;border-radius:26px;background:#24182f;color:white}
+.business-brand h3{margin:0;font-size:clamp(32px,4vw,54px);line-height:1.1;letter-spacing:-.05em}
+.business-brand h3 span{color:#f5821f}
+.business-brand p:not(.business-eyebrow){margin:24px 0;color:#e0d3e5;line-height:1.7}
+.business-brand>img{width:100%;height:auto}
+.business-steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.business-steps .video-plan{min-height:0;padding:32px}
+.business-step-number{color:#a64baa;font-size:13px;font-weight:800;letter-spacing:.1em}
+.business-steps h3{margin-top:26px;font-size:28px;line-height:1.15}
+.business-steps .video-plan p{margin:18px 0 0;font-size:14px;line-height:1.65;color:#706675}
+.business-consult{padding:82px 0;background:radial-gradient(ellipse at 90% 50%,#60316d,#24182f 70%);color:#fff}
+.business-consult__inner{display:flex;align-items:center;justify-content:space-between;gap:50px}
+.business-consult h2{max-width:750px;margin:0;font-size:clamp(38px,4.5vw,64px);line-height:1.08;letter-spacing:-.06em}
+.business-consult h2 span{color:#f5821f}
+.business-consult p:not(.business-eyebrow){max-width:600px;margin:24px 0 0;color:#ded0e3;line-height:1.65}
+.business-consult .cta-button{flex-shrink:0}
+.business-page :is(a,button,summary,[role=tabpanel]):focus-visible{outline:3px solid #f5821f;outline-offset:5px}
+@media(max-width:1100px){.business-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-hero-visual{min-height:380px}.business-steps .video-plan{padding:25px}.business-consult__inner{align-items:flex-start;flex-direction:column;gap:30px}}
+@media(max-width:760px){.business-hero-visual{min-height:350px;max-width:400px!important;margin:15px auto 40px!important}.business-hero-visual>img{max-width:330px}.business-page .video-hero h1{font-size:clamp(42px,9vw,65px)}.business-steps-grid{grid-template-columns:1fr}.business-steps .video-plan{padding:28px}.business-steps h3{margin-top:16px}.business-brand{grid-template-columns:1fr;padding:30px}.business-brand>img{max-width:260px;justify-self:center}.business-tabs{gap:8px}.business-tabs button{padding:12px 16px;font-size:12px}.business-consult{padding:65px 0}}
+@media(max-width:560px){.business-eyebrow{font-size:10px;line-height:1.6;margin-bottom:18px}.business-services-grid{grid-template-columns:1fr}.business-service__image{height:210px}.business-service__image img{height:190px}.business-hero-visual{min-height:300px}.business-hero-status{right:0;bottom:0;padding:14px 17px}.business-hero-status strong{font-size:14px}.business-hero-status div>span{font-size:11px}.business-hero-orbit{width:85%}.business-consult h2{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.business-page *{scroll-behavior:auto!important;transition:none!important}}
