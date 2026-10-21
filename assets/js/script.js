@@ -101,7 +101,8 @@ if (cityPicker) {
   }
 
   const translit = Object.fromEntries([1072,1073,1074,1075,1076,1077,1105,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103].map((code, index) => [String.fromCharCode(code), 'a|b|v|g|d|e|yo|zh|z|i|y|k|l|m|n|o|p|r|s|t|u|f|h|ts|ch|sh|shch||y||e|yu|ya'.split('|')[index]]));
-  const cityUrl = (name) => name === 'Уфа' ? './' : './gorod-' + [...name.toLowerCase()].map((char) => translit[char] ?? (/[a-z0-9-]/.test(char) ? char : '-')).join('').replace(/-+/g, '-').replace(/^-|-$/g, '') + '.html';
+  const siteRoot = /(^|\/)cities\//.test(location.pathname) ? '../' : './';
+  const cityUrl = (name) => name === 'Уфа' ? siteRoot : siteRoot + 'cities/' + [...name.toLowerCase()].map((char) => translit[char] ?? (/[a-z0-9-]/.test(char) ? char : '-')).join('').replace(/-+/g, '-').replace(/^-|-$/g, '') + '.html';
   const initialCity = document.documentElement.dataset.city || 'Уфа';
 
   function setCity(name) {

@@ -9,29 +9,22 @@ const { cityGroups, cityPrepositional } = vm.runInNewContext(definitions + '\n({
 const cities = cityGroups.flatMap(group => group.cities.map(name => ({ name, region: group.region })));
 const translit = { а:'a', б:'b', в:'v', г:'g', д:'d', е:'e', ё:'yo', ж:'zh', з:'z', и:'i', й:'y', к:'k', л:'l', м:'m', н:'n', о:'o', п:'p', р:'r', с:'s', т:'t', у:'u', ф:'f', х:'h', ц:'ts', ч:'ch', ш:'sh', щ:'shch', ъ:'', ы:'y', ь:'', э:'e', ю:'yu', я:'ya' };
 const slug = name => [...name.toLowerCase()].map(char => translit[char] ?? (/[a-z0-9-]/.test(char) ? char : '-')).join('').replace(/-+/g, '-').replace(/^-|-$/g, '');
-const cityFile = name => name === 'Уфа' ? '' : 'gorod-' + slug(name) + '.html';
+const cityFile = name => name === 'Уфа' ? '' : 'cities/' + slug(name) + '.html';
 const escapeHtml = text => text.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const replaceTag = (html, regex, value, label) => {
   if (!regex.test(html)) throw new Error('Missing ' + label);
   return html.replace(regex, value);
 };
 const meta = (name, value, property = false) => '<meta ' + (property ? 'property' : 'name') + '="' + name + '" content="' + escapeHtml(value) + '">';
-const directory = '<section class="city-directory" aria-labelledby="city-directory-title">\n' +
-  '<div class="city-directory__inner"><h2 id="city-directory-title">Города подключения</h2><p>Выберите город, чтобы посмотреть страницу подключения и оставить заявку по своему адресу.</p>\n' +
-  cityGroups.map(group => '<div class="city-directory__group"><h3>' + escapeHtml(group.region) + '</h3><ul>' +
-    group.cities.map(name => '<li><a href="./' + cityFile(name) + '">' + escapeHtml(name) + '</a></li>').join('') +
-    '</ul></div>').join('\n') +
-  '\n</div></section>\n';
-
 const noindexOnGithub = '<script>if(location.hostname.endsWith(".github.io")){const meta=document.createElement("meta");meta.name="robots";meta.content="noindex,nofollow";document.head.append(meta)}</script>';
 const rootRedirect = '<script>if(location.pathname.endsWith("/index.html"))location.replace(document.querySelector("link[rel=canonical]").href+location.search+location.hash)</script>';
 const addHeadScripts = (html, isHome) => html.includes('meta.name="robots"') ? html : html.replace('</head>', noindexOnGithub + (isHome ? rootRedirect : '') + '\n</head>');
 
 let root = fs.readFileSync('index.html', 'utf8');
 root = addHeadScripts(root, true);
-root = root.replace(/<section class="city-directory"[\s\S]*?<\/section>\s*/g, '');
-root = root.replace('<footer class="site-footer">', directory + '<footer class="site-footer">');
+
 root = root.replace('<html lang="ru">', '<html lang="ru" data-city="Уфа">');
+fs.mkdirSync('cities', { recursive: true });
 const pageFiles = [];
 for (const city of cities) {
   const file = cityFile(city.name);
@@ -54,7 +47,11 @@ for (const city of cities) {
   html = html.replaceAll('id="current-city">Уфа', 'id="current-city">' + escapeHtml(city.name));
   html = html.replaceAll('id="application-city" name="city" type="hidden" value="Уфа"', 'id="application-city" name="city" type="hidden" value="' + escapeHtml(city.name) + '"');
   if (city.name === 'Уфа') fs.writeFileSync('index.html', html);
-  else { fs.writeFileSync(file, html); pageFiles.push(file); }
+  else {
+    html = html.replaceAll('="./', '="../');
+    fs.writeFileSync(file, html);
+    pageFiles.push(file);
+  }
 }
 const contentFiles = ['dlya-biznesa.html','videonablyudenie.html','umnyj-shlagbaum.html','internet-v-kvartiru.html','internet-v-chastnyj-dom.html','internet-dlya-biznesa.html','televidenie.html','privacy-policy.html','personal-data-consent.html'];
 for (const file of contentFiles) {
