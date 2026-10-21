@@ -84,10 +84,29 @@ if (cityPicker) {
   const results = cityPicker.querySelector('#city-results');
   const empty = cityPicker.querySelector('#city-empty');
   const cityName = cityPicker.querySelector('#current-city');
+  const header = cityPicker.closest('.site-header');
+  const headerActions = header?.querySelector('.header-actions');
+  const headerBrand = header?.querySelector('.brand');
   const heroCity = document.querySelector('#hero-city');
   const formCity = document.querySelector('#application-city');
   const allCities = cityGroups.flatMap((group) => group.cities.map((name) => ({ name, region: group.region })));
   let currentCity = 'Уфа';
+
+  function fitHeaderActions() {
+    if (!header || !headerActions || !headerBrand) return;
+    header.classList.remove('site-header--compact');
+    if (!window.matchMedia('(max-width: 600px)').matches) return;
+    const styles = getComputedStyle(header);
+    const requiredWidth = headerBrand.getBoundingClientRect().width
+      + headerActions.getBoundingClientRect().width
+      + parseFloat(styles.columnGap)
+      + parseFloat(styles.paddingLeft)
+      + parseFloat(styles.paddingRight);
+    header.classList.toggle('site-header--compact', requiredWidth > header.getBoundingClientRect().width);
+  }
+
+  window.addEventListener('resize', fitHeaderActions);
+  document.fonts?.ready.then(fitHeaderActions);
 
   function closeCityPanel(restoreFocus = false) {
     panel.hidden = true;
@@ -110,6 +129,7 @@ if (cityPicker) {
     if (!selected) return;
     currentCity = selected.name;
     cityName.textContent = selected.name;
+    fitHeaderActions();
     toggle.setAttribute('aria-label', 'Выбрать город, сейчас ' + selected.name);
     if (heroCity) heroCity.textContent = 'в ' + cityPrepositional[selected.name];
     if (formCity) formCity.value = selected.name;

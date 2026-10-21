@@ -316,11 +316,12 @@ html{scroll-padding-top:104px}
   .site-header{top:12px;margin:0;gap:6px}
   .button--header{display:inline-flex;min-height:36px;padding:0 10px;border-radius:11px;font-size:11px}
   .header-actions{gap:3px}
-  .city__name{display:none}
+  .city__name{display:inline;max-width:none;overflow:visible;text-overflow:clip}
   .city{gap:2px}
   .menu-toggle{width:32px}
   .article-page{padding-top:90px}
 }
+.site-header--compact .button--header{display:none}
 @media(max-width:360px){
   .site-header{padding-left:9px;padding-right:7px}
   .brand img{width:80px}
