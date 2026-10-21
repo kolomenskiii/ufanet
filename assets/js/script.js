@@ -1,6 +1,10 @@
 const video = document.querySelector('.hero__video');
 const menuButton = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader && siteHeader.parentElement !== document.body) {
+  document.body.prepend(siteHeader);
+}
 const applicationModal = document.querySelector('#application-modal');
 const applicationForm = document.querySelector('#application-form');
 
@@ -96,40 +100,37 @@ if (cityPicker) {
     if (restoreFocus) toggle.focus();
   }
 
-  function setCity(name, updateUrl = false) {
+  const translit = Object.fromEntries([1072,1073,1074,1075,1076,1077,1105,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103].map((code, index) => [String.fromCharCode(code), 'a|b|v|g|d|e|yo|zh|z|i|y|k|l|m|n|o|p|r|s|t|u|f|h|ts|ch|sh|shch||y||e|yu|ya'.split('|')[index]]));
+  const cityUrl = (name) => name === 'Уфа' ? './' : './gorod-' + [...name.toLowerCase()].map((char) => translit[char] ?? (/[a-z0-9-]/.test(char) ? char : '-')).join('').replace(/-+/g, '-').replace(/^-|-$/g, '') + '.html';
+  const initialCity = document.documentElement.dataset.city || 'Уфа';
+
+  function setCity(name) {
     const selected = allCities.find((city) => city.name === name);
     if (!selected) return;
     currentCity = selected.name;
     cityName.textContent = selected.name;
-    toggle.setAttribute('aria-label', `Выбрать город, сейчас ${selected.name}`);
-    if (heroCity) heroCity.textContent = `в ${cityPrepositional[selected.name]}`;
+    toggle.setAttribute('aria-label', 'Выбрать город, сейчас ' + selected.name);
+    if (heroCity) heroCity.textContent = 'в ' + cityPrepositional[selected.name];
     if (formCity) formCity.value = selected.name;
     document.documentElement.dataset.city = selected.name;
     document.documentElement.dataset.region = selected.region;
-    cityPicker.querySelectorAll('.city-option').forEach((button) => {
-      button.setAttribute('aria-current', String(button.dataset.city === selected.name));
+    cityPicker.querySelectorAll('.city-option').forEach((link) => {
+      link.setAttribute('aria-current', String(link.dataset.city === selected.name));
     });
-    try { localStorage.setItem('ufanet-city', selected.name); } catch (_) { /* Storage may be unavailable. */ }
-    if (updateUrl && new URLSearchParams(location.search).get('city') !== selected.name) {
-      const url = new URL(window.location.href);
-      url.searchParams.set('city', selected.name);
-      history.pushState({ city: selected.name }, '', url);
-    }
     window.dispatchEvent(new CustomEvent('citychange', { detail: { city: selected.name, region: selected.region } }));
   }
 
-  function makeCityButton(city) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'city-option';
-    button.dataset.city = city.name;
-    button.textContent = city.name;
-    button.setAttribute('aria-current', String(city.name === currentCity));
-    button.addEventListener('click', () => {
-      setCity(city.name, true);
-      closeCityPanel(true);
+  function makeCityLink(city) {
+    const link = document.createElement('a');
+    link.href = cityUrl(city.name);
+    link.className = 'city-option';
+    link.dataset.city = city.name;
+    link.textContent = city.name;
+    link.setAttribute('aria-current', String(city.name === currentCity));
+    link.addEventListener('click', () => {
+      try { localStorage.setItem('ufanet-city', city.name); } catch (_) { /* Storage may be unavailable. */ }
     });
-    return button;
+    return link;
   }
 
   cityGroups.forEach((group) => {
@@ -145,7 +146,7 @@ if (cityPicker) {
     summary.append(count);
     const list = document.createElement('div');
     list.className = 'city-region__cities';
-    list.append(...group.cities.map((name) => makeCityButton({ name, region: group.region })));
+    list.append(...group.cities.map((name) => makeCityLink({ name, region: group.region })));
     item.append(summary, list);
     item.addEventListener('toggle', () => {
       if (item.open) regions.querySelectorAll('details').forEach((other) => { if (other !== item) other.open = false; });
@@ -164,7 +165,7 @@ if (cityPicker) {
       return;
     }
     const matches = allCities.filter((city) => normalize(city.name).includes(query));
-    results.replaceChildren(...matches.map(makeCityButton));
+    results.replaceChildren(...matches.map(makeCityLink));
     empty.hidden = matches.length > 0;
   });
 
@@ -183,10 +184,12 @@ if (cityPicker) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !panel.hidden) { event.preventDefault(); closeCityPanel(true); }
   });
-  window.addEventListener('popstate', () => setCity(new URLSearchParams(location.search).get('city') || 'Уфа'));
-  let savedCity = null;
-  try { savedCity = localStorage.getItem('ufanet-city'); } catch (_) { /* Storage may be unavailable. */ }
-  setCity(new URLSearchParams(location.search).get('city') || savedCity || 'Уфа');
+  const legacyCity = new URLSearchParams(location.search).get('city');
+  if (legacyCity && allCities.some((city) => city.name === legacyCity)) {
+    location.replace(cityUrl(legacyCity));
+  } else {
+    setCity(initialCity);
+  }
 }
 
 function openApplicationModal(values = {}) {
@@ -273,11 +276,24 @@ if (video) {
 }
 
 if (menuButton && mobileNav) {
+  const closeMobileNav = () => {
+    mobileNav.hidden = true;
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Открыть меню');
+  };
   menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isOpen));
     menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
     mobileNav.hidden = isOpen;
+  });
+  document.addEventListener('click', (event) => {
+    if (!mobileNav.hidden && !mobileNav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMobileNav();
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !mobileNav.hidden) closeMobileNav();
   });
 }
 

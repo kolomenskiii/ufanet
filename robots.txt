@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ufanethome.ru/sitemap.xml

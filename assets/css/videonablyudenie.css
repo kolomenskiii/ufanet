@@ -96,3 +96,14 @@
 @media(max-width:370px){.video-benefits__grid{grid-template-columns:1fr}.video-benefits article{min-height:0}.video-camera-card__bottom strong{font-size:22px}.video-camera-card__bottom button{padding:0 12px}}
 .video-hero__copy{min-width:0}.video-hero h1,.video-section-heading h2,.video-app h2,.video-own h2{overflow-wrap:anywhere;hyphens:auto}
 @media(max-width:900px){.video-shell,.video-hero__inner{width:calc(100% - 40px)}}
+
+/* Match the arrow icon used by the main page buttons. */
+.video-page :is(.cta-button__icon,.video-camera-card__bottom button span,.video-plan button span){
+  font-size:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 19 19 5M8 5h11v11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:17px 17px;
+}
+.video-page :is(.video-camera-card__bottom button span,.video-plan button span){display:block;flex:none;width:17px;height:17px}
+@media(max-width:760px){.video-hero__copy{padding-top:104px}}

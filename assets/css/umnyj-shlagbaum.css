@@ -40,3 +40,10 @@
 @media(max-width:760px){.barrier-page .video-hero h1{font-size:clamp(42px,9vw,65px)}.barrier-hero-visual{margin:10px auto 15px!important;padding-bottom:25px;max-width:430px!important}.barrier-hero-status{right:0;bottom:10%;padding:14px 17px}.barrier-feature-grid{grid-template-columns:1fr}.barrier-feature-image{height:260px}.barrier-app-phones{height:430px;max-width:540px;width:100%;margin:28px auto 0}.barrier-app-phone{width:64%}.barrier-archive-image{order:2}.barrier-archive .video-own__layout{gap:0}}
 @media(max-width:560px){.barrier-page .video-hero h1{font-size:clamp(39px,10vw,54px)}.barrier-eyebrow{font-size:10px;margin-bottom:18px}.barrier-hero-status strong{font-size:14px}.barrier-hero-status div>span{font-size:10px}.barrier-hero-status>span{width:30px;height:30px}.barrier-hero-status{padding:12px 15px;gap:10px}.barrier-features .video-camera-card__body{padding:23px}.barrier-feature-image{height:210px}.barrier-app-phones{height:320px}.barrier-plans .video-plan{padding:26px}.barrier-archive-badge strong{font-size:36px}}
 @media(max-width:370px){.barrier-app-phones{height:270px}}
+
+@media(max-width:760px){
+  .barrier-app{padding-bottom:35px}
+  .barrier-app-phones{height:min(58vw,300px);max-width:540px;margin:12px auto 0}
+  .barrier-app-phone--back,.barrier-app-phone--front{bottom:12px}
+}
+@media(max-width:370px){.barrier-app-phones{height:58vw}}

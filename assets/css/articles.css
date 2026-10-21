@@ -28,3 +28,8 @@
 .article-related a:hover{background:#e7d5ed}
 @media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:28px}.article-toc{grid-row:1}.article-toc ol{columns:2;column-gap:32px}.article-toc li{break-inside:avoid}}
 @media(max-width:600px){.article-shell{width:calc(100% - 40px);padding:32px 0 48px}.article-page .coverage{padding-top:36px;padding-bottom:40px}.article-copy p,.article-copy li{font-size:16px;line-height:1.75}.article-copy .article-lead{font-size:18px}.article-toc{padding:20px}.article-toc ol{columns:1}.article-copy h2{margin-top:32px}.article-related ul{display:grid}.article-breadcrumbs{font-size:12px}}
+
+@media(max-width:600px){
+  .article-page .coverage h2{max-width:360px;font-size:clamp(30px,8vw,38px);overflow-wrap:normal}
+  .article-page .coverage h2 br{display:block}
+}
