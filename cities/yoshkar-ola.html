@@ -30,29 +30,31 @@
 <nav class="desktop-nav" aria-label="Основная навигация">
 <a href="#tariffs">Тарифы в квартиру</a>
 <a href="#callback">Тарифы в частный дом</a>
-<a href="#internet-tariffs">Услуги</a>
-<a href="../videonablyudenie.html">Видеонаблюдение</a>
-<a href="../umnyj-shlagbaum.html">Умный шлагбаум</a>
 <a class="desktop-nav__business" href="../dlya-biznesa.html"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
 </nav>
 <div class="header-actions"><div class="city-picker">
-<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Йошкар-Ола"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__name" id="current-city">Йошкар-Ола</span><span class="city__chevron" aria-hidden="true"></span></button>
+<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Йошкар-Ола"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__text"><span class="city__name" id="current-city">Йошкар-Ола</span><span class="city__change">Сменить город</span></span><span class="city__chevron" aria-hidden="true"></span></button>
 <div class="city-panel" id="city-panel" hidden>
-  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><h2>Выберите город</h2></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
+  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><div class="city-panel__title">Выберите город</div></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
   <label class="city-panel__search"><span class="visually-hidden">Поиск города</span><input id="city-search" type="search" placeholder="Найти город" autocomplete="off"></label>
   <div class="city-panel__regions" id="city-regions"></div>
   <div class="city-panel__results" id="city-results" hidden></div>
   <p class="city-panel__empty" id="city-empty" hidden>Город не найден. Проверьте название.</p>
 </div></div>
+<a class="header-phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<a class="header-max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="../assets/images/MAX.svg" width="21" height="21" alt="">Написать в MAX</a>
 <a class="button button--header" href="#application-modal" data-open-modal>Подключиться</a>
 <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
 <a href="#tariffs">Тарифы в квартиру</a>
 <a href="#callback">Тарифы в частный дом</a>
-<a href="#internet-tariffs">Услуги</a>
-<a href="../videonablyudenie.html">Видеонаблюдение</a>
-<a href="../umnyj-shlagbaum.html">Умный шлагбаум</a>
 <a href="../dlya-biznesa.html">Для бизнеса</a>
+<div class="mobile-nav__actions">
+<a class="mobile-nav__phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<button class="mobile-nav__city" type="button" data-open-city>Сменить город <span aria-hidden="true">→</span></button>
+<a class="button mobile-nav__connect" href="#application-modal" data-open-modal>Подключиться</a>
+<a class="mobile-nav__max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="../assets/images/MAX.svg" width="22" height="22" alt="">Написать в MAX</a>
+</div>
 </nav></header>
 <section class="hero__content" aria-labelledby="hero-title">
 <h1 id="hero-title">Интернет и ТВ Уфанет<br><span id="hero-city">в Йошкар-Оле</span></h1>
@@ -76,7 +78,7 @@
       <path d="M-62 548C28 450 98 476 143 542C184 601 244 626 322 570" stroke="#FFC078" stroke-width="12" stroke-linecap="round"/>
     </svg>
   <div class="coverage__inner">
-    <h2 id="coverage-title">Проверьте возможность<br>подключения</h2>
+    <h2 class="coverage__title" id="coverage-title">Проверьте возможность<br>подключения</h2>
     <div class="coverage__panel">
       <form class="coverage__form" id="coverage-form" novalidate>
         <div class="coverage__fields">
@@ -103,7 +105,7 @@
 <section class="tariffs" id="tariffs" aria-labelledby="tariffs-title">
   <div class="tariffs__inner">
     <div class="tariffs__heading">
-      <h2 id="tariffs-title">Интернет <span>+ ТВ</span></h2>
+      <h2 id="tariffs-title">Тарифы на интернет <span>+ ТВ</span></h2>
       <p>Телевидение с невероятно чёткой картинкой и объёмным звуком вместе с быстрым домашним Интернетом от «Уфанет»!</p>
     </div>
     <div class="tariffs__grid" id="tariffs-grid" data-source="../assets/tariffs.json" data-service="Интернет + ТВ" aria-live="polite"></div>
@@ -113,7 +115,7 @@
 <section class="tariffs tariffs--internet" id="internet-tariffs" aria-labelledby="internet-tariffs-title">
   <div class="tariffs__inner">
     <div class="tariffs__heading">
-      <h2 id="internet-tariffs-title">Интернет</h2>
+      <h2 id="internet-tariffs-title">Тарифы на интернет</h2>
       <p>Быстрый и стабильный Интернет от «Уфанет»</p>
     </div>
     <div class="tariffs__grid" id="internet-tariffs-grid" data-source="../assets/internet-tariffs.json" data-service="Интернет" aria-live="polite"></div>
@@ -221,7 +223,7 @@
     <div class="callback__card">
       <img class="callback__planet" src="../assets/images/12.png" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true">
       <div class="callback__content">
-        <h2 id="callback-title">Остались вопросы? <span>Мы перезвоним.</span></h2>
+        <div class="callback__title" id="callback-title">Остались вопросы? <span>Мы перезвоним.</span></div>
         <p class="callback__lead">Поможем выбрать тариф, расскажем о подключении и ответим на любые вопросы. Оставьте контакты — мы свяжемся с вами.</p>
         <form class="callback__form" id="callback-form" novalidate>
           <div class="callback__fields">
@@ -292,18 +294,18 @@
       </a>
       <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <div class="site-footer__column">
-          <h2>Оборудование</h2>
+          <div class="site-footer__title">Оборудование</div>
           <a href="../videonablyudenie.html#cameras">Камеры Уфанет</a>
           <a href="#routers">Роутеры и ТВ-приставки Уфанет</a>
           <a href="../umnyj-shlagbaum.html">Умный шлагбаум от Уфанет</a>
         </div>
         <div class="site-footer__column">
-          <h2>Услуги</h2>
+          <div class="site-footer__title">Услуги</div>
           <a href="#internet-tariffs">Интернет</a>
           <a href="#tariffs">Интернет + ТВ</a>
         </div>
         <div class="site-footer__column">
-          <h2>Статьи</h2>
+          <div class="site-footer__title">Статьи</div>
           <a href="../internet-dlya-biznesa.html">Интернет для бизнеса</a>
           <a href="../televidenie.html">Телевидение</a>
           <a href="../internet-v-chastnyj-dom.html">Интернет в частный дом</a>
@@ -326,7 +328,7 @@
 </footer>
 <dialog class="application-modal" id="application-modal" aria-labelledby="application-modal-title" aria-describedby="application-modal-description">
   <div class="application-modal__top">
-    <h2 id="application-modal-title">Заявка на подключение</h2>
+    <div class="application-modal__title" id="application-modal-title">Заявка на подключение</div>
     <button class="application-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button>
   </div>
   <p class="application-modal__description" id="application-modal-description">Оставьте контакты, и мы уточним доступные варианты подключения.</p>

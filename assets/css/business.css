@@ -14,7 +14,7 @@
 .business-tabs button:hover{background:#eee3f0}
 .business-tabs button[aria-selected=true]{background:#80298d;border-color:#80298d;color:#fff}
 .business-panel[hidden]{display:none}
-.business-panel__title{margin:24px 0;font-size:24px;letter-spacing:-.04em}
+.business-panel__title{margin:24px 0;font-size:24px;font-weight:700;letter-spacing:-.04em}
 .business-tabs[role=tablist]~.business-panel>.business-panel__title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .business-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .business-service__image{display:grid;place-items:center;height:205px;background:radial-gradient(ellipse at 50% 65%,#e9daf0,transparent 65%)}
@@ -36,12 +36,12 @@
 .business-steps .video-plan p{margin:18px 0 0;font-size:14px;line-height:1.65;color:#706675}
 .business-consult{padding:82px 0;background:radial-gradient(ellipse at 90% 50%,#60316d,#24182f 70%);color:#fff}
 .business-consult__inner{display:flex;align-items:center;justify-content:space-between;gap:50px}
-.business-consult h2{max-width:750px;margin:0;font-size:clamp(38px,4.5vw,64px);line-height:1.08;letter-spacing:-.06em}
-.business-consult h2 span{color:#f5821f}
+.business-consult__title{max-width:750px;margin:0;font-size:clamp(38px,4.5vw,64px);line-height:1.08;letter-spacing:-.06em}
+.business-consult__title span{color:#f5821f}
 .business-consult p:not(.business-eyebrow){max-width:600px;margin:24px 0 0;color:#ded0e3;line-height:1.65}
 .business-consult .cta-button{flex-shrink:0}
 .business-page :is(a,button,summary,[role=tabpanel]):focus-visible{outline:3px solid #f5821f;outline-offset:5px}
 @media(max-width:1100px){.business-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-hero-visual{min-height:380px}.business-steps .video-plan{padding:25px}.business-consult__inner{align-items:flex-start;flex-direction:column;gap:30px}}
 @media(max-width:760px){.business-hero-visual{min-height:350px;max-width:400px!important;margin:15px auto 40px!important}.business-hero-visual>img{max-width:330px}.business-page .video-hero h1{font-size:clamp(42px,9vw,65px)}.business-steps-grid{grid-template-columns:1fr}.business-steps .video-plan{padding:28px}.business-steps h3{margin-top:16px}.business-brand{grid-template-columns:1fr;padding:30px}.business-brand>img{max-width:260px;justify-self:center}.business-tabs{gap:8px}.business-tabs button{padding:12px 16px;font-size:12px}.business-consult{padding:65px 0}}
-@media(max-width:560px){.business-eyebrow{font-size:10px;line-height:1.6;margin-bottom:18px}.business-services-grid{grid-template-columns:1fr}.business-service__image{height:210px}.business-service__image img{height:190px}.business-hero-visual{min-height:300px}.business-hero-status{right:0;bottom:0;padding:14px 17px}.business-hero-status strong{font-size:14px}.business-hero-status div>span{font-size:11px}.business-hero-orbit{width:85%}.business-consult h2{font-size:40px}}
+@media(max-width:560px){.business-eyebrow{font-size:10px;line-height:1.6;margin-bottom:18px}.business-services-grid{grid-template-columns:1fr}.business-service__image{height:210px}.business-service__image img{height:190px}.business-hero-visual{min-height:300px}.business-hero-status{right:0;bottom:0;padding:14px 17px}.business-hero-status strong{font-size:14px}.business-hero-status div>span{font-size:11px}.business-hero-orbit{width:85%}.business-consult__title{font-size:40px}}
 @media(prefers-reduced-motion:reduce){.business-page *{scroll-behavior:auto!important;transition:none!important}}

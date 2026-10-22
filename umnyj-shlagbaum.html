@@ -32,47 +32,49 @@
 <nav class="desktop-nav" aria-label="Основная навигация">
 <a href="./#tariffs">Тарифы в квартиру</a>
 <a href="./#callback">Тарифы в частный дом</a>
-<a href="./#internet-tariffs">Услуги</a>
-<a href="./videonablyudenie.html">Видеонаблюдение</a>
-<a href="./umnyj-shlagbaum.html" aria-current="page">Умный шлагбаум</a>
 <a class="desktop-nav__business" href="./dlya-biznesa.html"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
 </nav>
 <div class="header-actions"><div class="city-picker">
-<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__name" id="current-city">Уфа</span><span class="city__chevron" aria-hidden="true"></span></button>
+<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__text"><span class="city__name" id="current-city">Уфа</span><span class="city__change">Сменить город</span></span><span class="city__chevron" aria-hidden="true"></span></button>
 <div class="city-panel" id="city-panel" hidden>
-  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><h2>Выберите город</h2></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
+  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><div class="city-panel__title">Выберите город</div></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
   <label class="city-panel__search"><span class="visually-hidden">Поиск города</span><input id="city-search" type="search" placeholder="Найти город" autocomplete="off"></label>
   <div class="city-panel__regions" id="city-regions"></div>
   <div class="city-panel__results" id="city-results" hidden></div>
   <p class="city-panel__empty" id="city-empty" hidden>Город не найден. Проверьте название.</p>
 </div></div>
+<a class="header-phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<a class="header-max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="./assets/images/MAX.svg" width="21" height="21" alt="">Написать в MAX</a>
 <a class="button button--header" href="#application-modal" data-open-modal>Подключиться</a>
 <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
 <a href="./#tariffs">Тарифы в квартиру</a>
 <a href="./#callback">Тарифы в частный дом</a>
-<a href="./#internet-tariffs">Услуги</a>
-<a href="./videonablyudenie.html">Видеонаблюдение</a>
-<a href="./umnyj-shlagbaum.html" aria-current="page">Умный шлагбаум</a>
 <a href="./dlya-biznesa.html">Для бизнеса</a>
+<div class="mobile-nav__actions">
+<a class="mobile-nav__phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<button class="mobile-nav__city" type="button" data-open-city>Сменить город <span aria-hidden="true">→</span></button>
+<a class="button mobile-nav__connect" href="#application-modal" data-open-modal>Подключиться</a>
+<a class="mobile-nav__max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="./assets/images/MAX.svg" width="22" height="22" alt="">Написать в MAX</a>
+</div>
 </nav></header>
 <div class="video-hero__inner">
   <div class="video-hero__copy"><p class="barrier-eyebrow">Умный двор начинается со въезда</p><h1 id="barrier-title">Умный шлагбаум <span>узнаёт своих</span></h1><p class="video-hero__lead">Открывает въезд по номеру автомобиля. Управляйте доступом со смартфона и будьте спокойны за свой двор — где бы вы ни находились.</p><div class="video-hero__actions"><a class="cta-button cta-button--hero" href="#application-modal" data-open-modal>Оставить заявку <span class="cta-button__icon" aria-hidden="true">↗</span></a><a class="video-hero__text-link" href="#plans">Варианты подключения <span aria-hidden="true">↓</span></a></div><p class="video-hero__note">Модернизируем установленный шлагбаум или поможем с установкой с нуля.</p></div>
   <div class="video-hero__visual barrier-hero-visual"><img src="./assets/images/umnyj-shlagbaum/hero-barrier.png" width="774" height="592" alt="Шлагбаум с камерой распознавания автомобильных номеров" fetchpriority="high"><div class="barrier-hero-status"><span aria-hidden="true">✓</span><div><strong>Номер распознан</strong><span>Добро пожаловать домой</span></div></div></div>
 </div></section>
 <section class="video-benefits" aria-label="Преимущества умного шлагбаума"><div class="video-shell video-benefits__grid">
-<article><span class="video-benefits__icon">01</span><h2>Без брелоков</h2><p>Автоматический въезд по номеру вашего автомобиля.</p></article>
-<article><span class="video-benefits__icon">02</span><h2>Доступ со смартфона</h2><p>Открывайте шлагбаум из любой точки, где есть интернет.</p></article>
-<article><span class="video-benefits__icon">03</span><h2>Поддержка 24/7</h2><p>Поможем по телефону и в мобильном приложении.</p></article>
-<article><span class="video-benefits__icon">04</span><h2>Обслуживание и ремонт</h2><p>Бесплатно обслуживаем и ремонтируем оборудование.</p></article>
+<article><span class="video-benefits__icon">01</span><div class="video-benefits__title">Без брелоков</div><p>Автоматический въезд по номеру вашего автомобиля.</p></article>
+<article><span class="video-benefits__icon">02</span><div class="video-benefits__title">Доступ со смартфона</div><p>Открывайте шлагбаум из любой точки, где есть интернет.</p></article>
+<article><span class="video-benefits__icon">03</span><div class="video-benefits__title">Поддержка 24/7</div><p>Поможем по телефону и в мобильном приложении.</p></article>
+<article><span class="video-benefits__icon">04</span><div class="video-benefits__title">Обслуживание и ремонт</div><p>Бесплатно обслуживаем и ремонтируем оборудование.</p></article>
 </div></section>
 <section class="video-cameras barrier-features" id="features" aria-labelledby="features-title"><div class="video-shell">
-<div class="video-section-heading"><div><h2 id="features-title">Ваш двор. <span>Ваши правила.</span></h2></div><p>Умная система контролирует въезд и сохраняет привычные способы открытия шлагбаума.</p></div>
+<div class="video-section-heading"><div><h2 id="features-title">Возможности <span>умного шлагбаума</span></h2></div><p>Умная система контролирует въезд и сохраняет привычные способы открытия шлагбаума.</p></div>
 <div class="barrier-feature-grid">
-<article class="video-camera-card"><div class="barrier-feature-image"><img src="./assets/images/umnyj-shlagbaum/recognition.png" width="800" height="410" loading="lazy" alt="Камера распознаёт номер приближающегося автомобиля"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Для жителей</p><h3>Узнает ваш автомобиль</h3><p>Камера считывает госномер при приближении. Если он добавлен в базу, стрела поднимается автоматически. Не нужно искать брелок или звонить с телефона.</p></div></article>
-<article class="video-camera-card"><div class="barrier-feature-image"><img src="./assets/images/umnyj-shlagbaum/emergency.png" width="1318" height="763" loading="lazy" alt="Автомобиль скорой помощи у шлагбаума"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Для экстренных служб</p><h3>Пропустит тех, кто спешит на помощь</h3><p>Встроенные алгоритмы распознают автомобили спецслужб — скорой помощи, полиции и других. Им не нужно звонить в одну из квартир, чтобы въехать во двор.</p></div></article>
+<article class="video-camera-card"><div class="barrier-feature-image"><img src="./assets/images/umnyj-shlagbaum/recognition.png" width="800" height="410" loading="lazy" alt="Камера распознаёт номер приближающегося автомобиля"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Для жителей</p><h3>Распознавание номера автомобиля</h3><p>Камера считывает госномер при приближении. Если он добавлен в базу, стрела поднимается автоматически. Не нужно искать брелок или звонить с телефона.</p></div></article>
+<article class="video-camera-card"><div class="barrier-feature-image"><img src="./assets/images/umnyj-shlagbaum/emergency.png" width="1318" height="763" loading="lazy" alt="Автомобиль скорой помощи у шлагбаума"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Для экстренных служб</p><h3>Проезд спецтранспорта</h3><p>Встроенные алгоритмы распознают автомобили спецслужб — скорой помощи, полиции и других. Им не нужно звонить в одну из квартир, чтобы въехать во двор.</p></div></article>
 </div></div></section>
-<section class="video-app barrier-app" id="app" aria-labelledby="app-title"><div class="video-shell video-app__layout"><div class="video-app__copy"><h2 id="app-title">Ваш шлагбаум <span>в вашем телефоне</span></h2><p>Управляйте услугой в приложении «Мой умный дом». Всё под рукой, даже когда вы далеко от дома.</p><ul><li>Открывайте шлагбаум через интернет</li><li>Смотрите камеру въезда в общем списке камер</li><li>Представитель дома добавляет госномера и управляет доступом в личном кабинете</li></ul><a class="cta-button" href="#application-modal" data-open-modal>Подключить умный шлагбаум <span class="cta-button__icon" aria-hidden="true">↗</span></a></div><div class="barrier-app-phones"><img class="barrier-app-phone barrier-app-phone--back" src="./assets/images/umnyj-shlagbaum/app-store.png" width="1333" height="1144" loading="lazy" alt="Приложение Мой умный дом в магазине приложений"><img class="barrier-app-phone barrier-app-phone--front" src="./assets/images/umnyj-shlagbaum/app-barriers.png" width="1333" height="1144" loading="lazy" alt="Вкладка Шлагбаум в приложении Мой умный дом"></div></div></section>
+<section class="video-app barrier-app" id="app" aria-labelledby="app-title"><div class="video-shell video-app__layout"><div class="video-app__copy"><h2 id="app-title">Управление шлагбаумом <span>со смартфона</span></h2><p>Управляйте услугой в приложении «Мой умный дом». Всё под рукой, даже когда вы далеко от дома.</p><ul><li>Открывайте шлагбаум через интернет</li><li>Смотрите камеру въезда в общем списке камер</li><li>Представитель дома добавляет госномера и управляет доступом в личном кабинете</li></ul><a class="cta-button" href="#application-modal" data-open-modal>Подключить умный шлагбаум <span class="cta-button__icon" aria-hidden="true">↗</span></a></div><div class="barrier-app-phones"><img class="barrier-app-phone barrier-app-phone--back" src="./assets/images/umnyj-shlagbaum/app-store.png" width="1333" height="1144" loading="lazy" alt="Приложение Мой умный дом в магазине приложений"><img class="barrier-app-phone barrier-app-phone--front" src="./assets/images/umnyj-shlagbaum/app-barriers.png" width="1333" height="1144" loading="lazy" alt="Вкладка Шлагбаум в приложении Мой умный дом"></div></div></section>
 <section class="video-plans barrier-plans" id="plans" aria-labelledby="plans-title"><div class="video-shell">
 <div class="video-section-heading"><div><h2 id="plans-title">Подключение <span>для вашего дома</span></h2></div><p>Обновим существующий шлагбаум или установим новый. Точную стоимость рассчитаем после инженерного обследования.</p></div>
 <div class="barrier-plans-grid">
@@ -81,8 +83,8 @@
 <article class="video-plan"><p class="video-plan__label">Установка с нуля</p><h3>Новый въезд в ваш двор</h3><p class="barrier-plan-description">Установка шлагбаума с системой распознавания номеров.</p><div class="barrier-plan-setup"><strong>1 111,10 ₽</strong><span>подключение с квартиры*</span></div><div class="video-plan__price"><strong>34,70 ₽</strong><span>/мес.</span></div><p class="barrier-plan-unit">абонентская плата с квартиры*</p><button type="button" data-barrier-plan="Установка умного шлагбаума с нуля">Рассчитать для дома <span aria-hidden="true">↗</span></button></article>
 </div><p class="video-cameras__footnote">* Пример расчёта для дома из 144 квартир. Жители могут самостоятельно распределять общую сумму между собой. Цены — по странице Уфанет для Уфы от 20 октября 2026 года. Итоговые условия уточняются после инженерного обследования.</p>
 </div></section>
-<section class="video-own barrier-archive" aria-labelledby="archive-title"><div class="video-shell video-own__layout"><div class="barrier-archive-image"><img src="./assets/images/umnyj-shlagbaum/cloud-cameras.png" width="2107" height="1148" loading="lazy" alt="Камеры шлагбаума для наблюдения за въездом"></div><div class="video-own__copy"><h2 id="archive-title">Больше, чем <span>просто въезд</span></h2><p>Камера шлагбаума работает и как камера видеонаблюдения: отображается в общем списке и сохраняет записи в облаке.</p><div class="barrier-archive-badge"><strong>5 дней</strong><span>архив видеозаписей</span></div><a class="cta-button" href="#application-modal" data-open-modal>Узнать о подключении <span class="cta-button__icon" aria-hidden="true">↗</span></a></div></div></section>
-<section class="video-faq" id="faq" aria-labelledby="barrier-faq-title"><div class="video-shell"><div class="video-section-heading"><div><h2 id="barrier-faq-title">Часто <span>спрашивают</span></h2></div></div><div class="video-faq__list">
+<section class="video-own barrier-archive" aria-labelledby="archive-title"><div class="video-shell video-own__layout"><div class="barrier-archive-image"><img src="./assets/images/umnyj-shlagbaum/cloud-cameras.png" width="2107" height="1148" loading="lazy" alt="Камеры шлагбаума для наблюдения за въездом"></div><div class="video-own__copy"><h2 id="archive-title">Видеонаблюдение за въездом <span>и облачный архив</span></h2><p>Камера шлагбаума работает и как камера видеонаблюдения: отображается в общем списке и сохраняет записи в облаке.</p><div class="barrier-archive-badge"><strong>5 дней</strong><span>архив видеозаписей</span></div><a class="cta-button" href="#application-modal" data-open-modal>Узнать о подключении <span class="cta-button__icon" aria-hidden="true">↗</span></a></div></div></section>
+<section class="video-faq" id="faq" aria-labelledby="barrier-faq-title"><div class="video-shell"><div class="video-section-heading"><div><h2 id="barrier-faq-title">Вопросы <span>об умном шлагбауме</span></h2></div></div><div class="video-faq__list">
 <details><summary>Можно сделать умным уже установленный шлагбаум?</summary><p>Да. Систему Уфанет можно интегрировать в существующий шлагбаум. Специалисты проведут инженерное обследование и рассчитают подходящий вариант подключения.</p></details>
 <details><summary>Понадобится брелок или GSM-модуль?</summary><p>Для умной системы они не нужны: шлагбаум открывается по госномеру или через приложение. При этом возможность существующего способа открытия сохраняется.</p></details>
 <details><summary>Кто добавляет автомобили и управляет доступом?</summary><p>Представитель дома загружает госномера в личном кабинете и определяет, кому разрешён въезд. Добавить новый автомобиль или удалить доступ можно в несколько кликов.</p></details>
@@ -99,18 +101,18 @@
       </a>
       <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <div class="site-footer__column">
-          <h2>Оборудование</h2>
+          <div class="site-footer__title">Оборудование</div>
           <a href="./videonablyudenie.html#cameras">Камеры Уфанет</a>
           <a href="./#routers">Роутеры и ТВ-приставки Уфанет</a>
           <a href="./umnyj-shlagbaum.html">Умный шлагбаум от Уфанет</a>
         </div>
         <div class="site-footer__column">
-          <h2>Услуги</h2>
+          <div class="site-footer__title">Услуги</div>
           <a href="./#internet-tariffs">Интернет</a>
           <a href="./#tariffs">Интернет + ТВ</a>
         </div>
         <div class="site-footer__column">
-          <h2>Статьи</h2>
+          <div class="site-footer__title">Статьи</div>
           <a href="./internet-dlya-biznesa.html">Интернет для бизнеса</a>
           <a href="./televidenie.html">Телевидение</a>
           <a href="./internet-v-chastnyj-dom.html">Интернет в частный дом</a>
@@ -132,7 +134,7 @@
   </div>
 </footer>
 <dialog class="application-modal" id="application-modal" aria-labelledby="application-modal-title" aria-describedby="application-modal-description">
-<div class="application-modal__top"><h2 id="application-modal-title">Заявка на умный шлагбаум</h2><button class="application-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button></div>
+<div class="application-modal__top"><div class="application-modal__title" id="application-modal-title">Заявка на умный шлагбаум</div><button class="application-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button></div>
 <p class="application-modal__description" id="application-modal-description">Оставьте контакты и адрес дома. Специалист уточнит детали и поможет рассчитать стоимость подключения.</p><p class="application-modal__selected" id="application-selected" hidden></p>
 <form class="application-modal__form" id="application-form" autocomplete="off" novalidate><input id="application-tariff" name="tariff" type="hidden"><input id="application-city" name="city" type="hidden" value="Уфа"><label class="application-modal__field" for="application-name"><span>Имя</span><input id="application-name" name="name" type="text" autocomplete="off" minlength="2" required></label><label class="application-modal__field" for="application-phone"><span>Телефон</span><input id="application-phone" name="phone" type="tel" inputmode="tel" autocomplete="off" required></label><label class="application-modal__field" for="application-address"><span>Адрес подключения</span><input id="application-address" name="address" type="text" autocomplete="off" placeholder="Город, улица, дом" minlength="6" required></label><label class="application-modal__consent"><input id="application-consent" name="consent" type="checkbox" required checked><span>Я ознакомлен с <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a> и даю <a href="./personal-data-consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>.</span></label><button class="application-modal__submit" type="submit">Отправить заявку</button><p class="application-modal__status" id="application-status" role="status" aria-live="polite" hidden></p></form><a class="application-modal__max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX"><img src="./assets/images/MAX.svg" width="38" height="38" alt="">Написать в MAX</a>
 </dialog>

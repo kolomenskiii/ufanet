@@ -31,46 +31,48 @@
 <nav class="desktop-nav" aria-label="Основная навигация">
 <a href="./#tariffs">Тарифы в квартиру</a>
 <a href="./#callback">Тарифы в частный дом</a>
-<a href="./#internet-tariffs">Услуги</a>
-<a href="./videonablyudenie.html">Видеонаблюдение</a>
-<a href="./umnyj-shlagbaum.html">Умный шлагбаум</a>
 <a class="desktop-nav__business" href="./dlya-biznesa.html"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2.5M3.5 12h17" stroke="currentColor" stroke-width="1.6"/></svg>Для бизнеса</a>
 </nav>
 <div class="header-actions"><div class="city-picker">
-<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__name" id="current-city">Уфа</span><span class="city__chevron" aria-hidden="true"></span></button>
+<button class="city" id="city-toggle" type="button" aria-controls="city-panel" aria-expanded="false" aria-label="Выбрать город, сейчас Уфа"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span class="city__text"><span class="city__name" id="current-city">Уфа</span><span class="city__change">Сменить город</span></span><span class="city__chevron" aria-hidden="true"></span></button>
 <div class="city-panel" id="city-panel" hidden>
-  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><h2>Выберите город</h2></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
+  <div class="city-panel__heading"><div><span class="city-panel__eyebrow">Город подключения</span><div class="city-panel__title">Выберите город</div></div><button class="city-panel__close" type="button" aria-label="Закрыть выбор города">×</button></div>
   <label class="city-panel__search"><span class="visually-hidden">Поиск города</span><input id="city-search" type="search" placeholder="Найти город" autocomplete="off"></label>
   <div class="city-panel__regions" id="city-regions"></div>
   <div class="city-panel__results" id="city-results" hidden></div>
   <p class="city-panel__empty" id="city-empty" hidden>Город не найден. Проверьте название.</p>
 </div></div>
+<a class="header-phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<a class="header-max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="./assets/images/MAX.svg" width="21" height="21" alt="">Написать в MAX</a>
 <a class="button button--header" href="#application-modal" data-open-modal>Подключиться</a>
 <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
 <a href="./#tariffs">Тарифы в квартиру</a>
 <a href="./#callback">Тарифы в частный дом</a>
-<a href="./#internet-tariffs">Услуги</a>
-<a href="./videonablyudenie.html">Видеонаблюдение</a>
-<a href="./umnyj-shlagbaum.html">Умный шлагбаум</a>
 <a href="./dlya-biznesa.html">Для бизнеса</a>
+<div class="mobile-nav__actions">
+<a class="mobile-nav__phone" href="tel:88007758783"><span>Подключение:</span><strong>8 800 775-87-83</strong></a>
+<button class="mobile-nav__city" type="button" data-open-city>Сменить город <span aria-hidden="true">→</span></button>
+<a class="button mobile-nav__connect" href="#application-modal" data-open-modal>Подключиться</a>
+<a class="mobile-nav__max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer"><img src="./assets/images/MAX.svg" width="22" height="22" alt="">Написать в MAX</a>
+</div>
 </nav></header>
 <div class="video-hero__inner"><div class="video-hero__copy"><h1 id="video-title">Видео&shy;наблюдение <span>под вашим контролем</span></h1><p class="video-hero__lead">Смотрите, что происходит дома или на участке, из любой точки, где есть интернет. Записи сохраняются в облаке, а камеры работают с сетью любого провайдера.</p><div class="video-hero__actions"><a class="cta-button cta-button--hero" href="#application-modal" data-open-modal>Оставить заявку <span class="cta-button__icon" aria-hidden="true">↗</span></a><a class="video-hero__text-link" href="#cameras">Выбрать камеру <span aria-hidden="true">↓</span></a></div><p class="video-hero__note">Установка за 0 ₽ при покупке камеры для абонентов Уфанет*</p></div><div class="video-hero__visual" aria-hidden="true"><img src="./assets/images/videonablyudenie/hero-cameras.png" width="774" height="592" alt=""></div></div>
 </section>
 <section class="video-benefits" aria-label="Преимущества видеонаблюдения"><div class="video-shell video-benefits__grid">
-<article><span class="video-benefits__icon">01</span><h2>Установка за 0 ₽*</h2><p>Для абонентов Уфанет при покупке камеры.</p></article>
-<article><span class="video-benefits__icon">02</span><h2>Доступ отовсюду</h2><p>Просматривайте камеры в приложении через интернет.</p></article>
-<article><span class="video-benefits__icon">03</span><h2>Облачный архив</h2><p>Записи хранятся на защищённом сервере.</p></article>
-<article><span class="video-benefits__icon">04</span><h2>Любой провайдер</h2><p>Камеры работают с интернетом другого оператора.</p></article>
+<article><span class="video-benefits__icon">01</span><div class="video-benefits__title">Установка за 0 ₽*</div><p>Для абонентов Уфанет при покупке камеры.</p></article>
+<article><span class="video-benefits__icon">02</span><div class="video-benefits__title">Доступ отовсюду</div><p>Просматривайте камеры в приложении через интернет.</p></article>
+<article><span class="video-benefits__icon">03</span><div class="video-benefits__title">Облачный архив</div><p>Записи хранятся на защищённом сервере.</p></article>
+<article><span class="video-benefits__icon">04</span><div class="video-benefits__title">Любой провайдер</div><p>Камеры работают с интернетом другого оператора.</p></article>
 </div></section>
 <section class="video-cameras" id="cameras" aria-labelledby="cameras-title"><div class="video-shell">
-<div class="video-section-heading"><div><h2 id="cameras-title">Камера под <span>вашу задачу</span></h2></div><p>Внутренние камеры для квартиры и защищённые модели для улицы.</p></div>
+<div class="video-section-heading"><div><h2 id="cameras-title">Камеры видеонаблюдения <span>для дома и улицы</span></h2></div><p>Внутренние камеры для квартиры и защищённые модели для улицы.</p></div>
 <div class="video-camera-grid">
 <article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-indoor-rotate.png" width="1200" height="700" loading="lazy" alt="Белая поворотная внутренняя камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Внутренняя · Wi-Fi</p><h3>Поворотная камера</h3><p>2 Мп, встроенный микрофон и ИК-подсветка до 15 м.</p><div class="video-camera-card__bottom"><strong>2 350 ₽</strong><button type="button" data-camera="Поворотная внутренняя камера">Заказать <span aria-hidden="true">↗</span></button></div></div></article>
 <article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-indoor.png" width="1200" height="720" loading="lazy" alt="Чёрная внутренняя камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Внутренняя · звук</p><h3>Камера со звуком</h3><p>2 Мп, обзор до 103° и адаптивная ИК-подсветка.</p><div class="video-camera-card__bottom"><strong>4 700 ₽</strong><button type="button" data-camera="Внутренняя камера со звуком">Заказать <span aria-hidden="true">↗</span></button></div><small>Инжектор PoE — 1 900 ₽ отдельно.</small></div></article>
-<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-outdoor-rotate.png" width="761" height="457" loading="lazy" alt="Белая поворотная уличная камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · поворотная</p><h3>Для обзора участка</h3><p>2 Мп, горизонтальный обзор 180° и защита IP54.</p><div class="video-camera-card__bottom"><strong>3 700 ₽</strong><button type="button" data-camera="Поворотная уличная камера">Заказать <span aria-hidden="true">↗</span></button></div></div></article>
-<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-vandalproof.png" width="1200" height="720" loading="lazy" alt="Антивандальная купольная камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · антивандальная</p><h3>Для ближнего обзора</h3><p>5 Мп, широкий угол 107° и защита от пыли и влаги IP67.</p><div class="video-camera-card__bottom"><strong>4 700 ₽</strong><button type="button" data-camera="Антивандальная камера">Заказать <span aria-hidden="true">↗</span></button></div><small>Инжектор PoE — 1 900 ₽ отдельно.</small></div></article>
-<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-outdoor.webp" loading="lazy" alt="Уличная камера для среднего и дальнего обзора"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · защищённая</p><h3>Для дальнего обзора</h3><p>5 Мп, ИК-подсветка до 40 м и защита IP67.</p><div class="video-camera-card__bottom"><strong>4 700 ₽</strong><button type="button" data-camera="Уличная камера для дальнего обзора">Заказать <span aria-hidden="true">↗</span></button></div><small>Инжектор PoE — 1 900 ₽ отдельно.</small></div></article>
+<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-outdoor-rotate.png" width="761" height="457" loading="lazy" alt="Белая поворотная уличная камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · поворотная</p><h3>Поворотная уличная камера</h3><p>2 Мп, горизонтальный обзор 180° и защита IP54.</p><div class="video-camera-card__bottom"><strong>3 700 ₽</strong><button type="button" data-camera="Поворотная уличная камера">Заказать <span aria-hidden="true">↗</span></button></div></div></article>
+<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-vandalproof.png" width="1200" height="720" loading="lazy" alt="Антивандальная купольная камера"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · антивандальная</p><h3>Антивандальная уличная камера</h3><p>5 Мп, широкий угол 107° и защита от пыли и влаги IP67.</p><div class="video-camera-card__bottom"><strong>4 700 ₽</strong><button type="button" data-camera="Антивандальная камера">Заказать <span aria-hidden="true">↗</span></button></div><small>Инжектор PoE — 1 900 ₽ отдельно.</small></div></article>
+<article class="video-camera-card"><div class="video-camera-card__image"><img src="./assets/images/videonablyudenie/camera-outdoor.webp" loading="lazy" alt="Уличная камера для среднего и дальнего обзора"></div><div class="video-camera-card__body"><p class="video-camera-card__kind">Уличная · защищённая</p><h3>Уличная камера с ИК-подсветкой</h3><p>5 Мп, ИК-подсветка до 40 м и защита IP67.</p><div class="video-camera-card__bottom"><strong>4 700 ₽</strong><button type="button" data-camera="Уличная камера для дальнего обзора">Заказать <span aria-hidden="true">↗</span></button></div><small>Инжектор PoE — 1 900 ₽ отдельно.</small></div></article>
 </div>
 <p class="video-cameras__footnote">* Бесплатная установка при покупке камеры действует для абонентов Уфанет при наличии технической возможности и оформлении заявки на ufanet.ru. Подключение по Wi-Fi оплачивается отдельно. Условия уточняйте у оператора.</p>
 </div></section>
@@ -81,8 +83,8 @@
 <article class="video-plan video-plan--featured"><p class="video-plan__label">Рекомендуем · 1 камера</p><h3>Видео 10</h3><p class="video-plan__days"><strong>10</strong> дней архива</p><div class="video-plan__price"><strong>370 ₽</strong><span>/мес.</span></div><button type="button" data-plan="Видео 10 · 1 камера · 370 ₽/мес.">Выбрать тариф <span aria-hidden="true">↗</span></button></article>
 <article class="video-plan"><p class="video-plan__label">1 камера</p><h3>Видео 30</h3><p class="video-plan__days"><strong>30</strong> дней архива</p><div class="video-plan__price"><strong>470 ₽</strong><span>/мес.</span></div><button type="button" data-plan="Видео 30 · 1 камера · 470 ₽/мес.">Выбрать тариф <span aria-hidden="true">↗</span></button></article>
 </div></div></section>
-<section class="video-own" aria-labelledby="own-title"><div class="video-shell video-own__layout"><div class="video-own__image"><img src="./assets/images/videonablyudenie/installation.png" width="948" height="498" loading="lazy" alt="Специалист устанавливает камеру видеонаблюдения"></div><div class="video-own__copy"><h2 id="own-title">Подключим <span>вашу камеру</span></h2><p>Совместимую IP-камеру и инжектор PoE можно использовать с услугой Уфанет. Возможность подключения проверит специалист.</p><div class="video-own__price">Монтаж своей камеры <strong>1 900 ₽</strong></div><a class="cta-button" href="#application-modal" data-open-modal>Уточнить совместимость <span class="cta-button__icon" aria-hidden="true">↗</span></a></div></div></section>
-<section class="video-faq" id="faq" aria-labelledby="video-faq-title"><div class="video-shell"><div class="video-section-heading"><div><h2 id="video-faq-title">Часто <span>спрашивают</span></h2></div></div><div class="video-faq__list">
+<section class="video-own" aria-labelledby="own-title"><div class="video-shell video-own__layout"><div class="video-own__image"><img src="./assets/images/videonablyudenie/installation.png" width="948" height="498" loading="lazy" alt="Специалист устанавливает камеру видеонаблюдения"></div><div class="video-own__copy"><h2 id="own-title">Подключение <span>своей IP-камеры</span></h2><p>Совместимую IP-камеру и инжектор PoE можно использовать с услугой Уфанет. Возможность подключения проверит специалист.</p><div class="video-own__price">Монтаж своей камеры <strong>1 900 ₽</strong></div><a class="cta-button" href="#application-modal" data-open-modal>Уточнить совместимость <span class="cta-button__icon" aria-hidden="true">↗</span></a></div></div></section>
+<section class="video-faq" id="faq" aria-labelledby="video-faq-title"><div class="video-shell"><div class="video-section-heading"><div><h2 id="video-faq-title">Вопросы <span>о видеонаблюдении</span></h2></div></div><div class="video-faq__list">
 <details><summary>Где смотреть камеры и скачивать записи?</summary><p>В приложении «Мой умный дом» или на сайте <span>ucams.ufanet.ru</span>.</p></details>
 <details><summary>Можно подключить свою камеру?</summary><p>Да, если IP-камера совместима и есть инжектор PoE. Монтаж оплачивается отдельно; совместимость уточнит специалист после заявки.</p></details>
 <details><summary>Есть ли гарантия на камеру?</summary><p>При покупке новой камеры у Уфанета гарантия составляет один год.</p></details>
@@ -98,18 +100,18 @@
       </a>
       <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <div class="site-footer__column">
-          <h2>Оборудование</h2>
+          <div class="site-footer__title">Оборудование</div>
           <a href="./videonablyudenie.html#cameras">Камеры Уфанет</a>
           <a href="./#routers">Роутеры и ТВ-приставки Уфанет</a>
           <a href="./umnyj-shlagbaum.html">Умный шлагбаум от Уфанет</a>
         </div>
         <div class="site-footer__column">
-          <h2>Услуги</h2>
+          <div class="site-footer__title">Услуги</div>
           <a href="./#internet-tariffs">Интернет</a>
           <a href="./#tariffs">Интернет + ТВ</a>
         </div>
         <div class="site-footer__column">
-          <h2>Статьи</h2>
+          <div class="site-footer__title">Статьи</div>
           <a href="./internet-dlya-biznesa.html">Интернет для бизнеса</a>
           <a href="./televidenie.html">Телевидение</a>
           <a href="./internet-v-chastnyj-dom.html">Интернет в частный дом</a>
@@ -131,7 +133,7 @@
   </div>
 </footer>
 <dialog class="application-modal" id="application-modal" aria-labelledby="application-modal-title" aria-describedby="application-modal-description">
-<div class="application-modal__top"><h2 id="application-modal-title">Заявка на подключение</h2><button class="application-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button></div>
+<div class="application-modal__top"><div class="application-modal__title" id="application-modal-title">Заявка на подключение</div><button class="application-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button></div>
 <p class="application-modal__description" id="application-modal-description">Оставьте контакты, и мы уточним доступные варианты подключения.</p><p class="application-modal__selected" id="application-selected" hidden></p>
 <form class="application-modal__form" id="application-form" autocomplete="off" novalidate><input id="application-tariff" name="tariff" type="hidden"><input id="application-city" name="city" type="hidden" value="Уфа"><label class="application-modal__field" for="application-name"><span>Имя</span><input id="application-name" name="name" type="text" autocomplete="off" minlength="2" required></label><label class="application-modal__field" for="application-phone"><span>Телефон</span><input id="application-phone" name="phone" type="tel" inputmode="tel" autocomplete="off" required></label><label class="application-modal__field" for="application-address"><span>Адрес подключения</span><input id="application-address" name="address" type="text" autocomplete="off" placeholder="Город, улица, дом, квартира" minlength="6" required></label><label class="application-modal__consent"><input id="application-consent" name="consent" type="checkbox" required checked><span>Я ознакомлен с <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a> и даю <a href="./personal-data-consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>.</span></label><button class="application-modal__submit" type="submit">Отправить заявку</button><p class="application-modal__status" id="application-status" role="status" aria-live="polite" hidden></p></form><a class="application-modal__max" href="https://max.ru/u/f9LHodD0cOJbGuUnkNs5vbebn5z8wm-2vX0cb0RUgSHp25MZMmCRiGww1hg" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX"><img src="./assets/images/MAX.svg" width="38" height="38" alt="">Написать в MAX</a>
 </dialog>

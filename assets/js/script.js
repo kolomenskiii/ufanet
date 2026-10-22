@@ -308,6 +308,16 @@ if (menuButton && mobileNav) {
     menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
     mobileNav.hidden = isOpen;
   });
+  mobileNav.addEventListener('click', (event) => {
+    if (event.target.closest('[data-open-city]')) {
+      event.stopPropagation();
+      closeMobileNav();
+      cityPicker?.querySelector('#city-toggle')?.click();
+      cityPicker?.querySelector('#city-search')?.focus();
+    } else if (event.target.closest('[data-open-modal], .mobile-nav__phone, .mobile-nav__max')) {
+      closeMobileNav();
+    }
+  });
   document.addEventListener('click', (event) => {
     if (!mobileNav.hidden && !mobileNav.contains(event.target) && !menuButton.contains(event.target)) {
       closeMobileNav();
